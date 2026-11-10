@@ -204,6 +204,31 @@ footer a:hover{color:var(--ink)}
 .rv{opacity:0;transform:translateY(40px)}
 .no-js .rv{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1!important;transform:none!important}.m,.badge{opacity:1;transform:none}}
+.roles{display:grid;grid-template-columns:1fr 360px;gap:70px;align-items:center;margin-top:50px}
+.acc{display:flex;flex-direction:column;gap:10px}
+.ac{border-radius:20px;border:1px solid var(--line);background:#fff;overflow:hidden;cursor:pointer;transition:all .4s}
+.ac h4{margin:0;padding:20px 24px;font-weight:600;font-size:19px;display:flex;align-items:center;gap:14px}
+.ac h4 i{width:34px;height:34px;border-radius:11px;background:#eef5ff;display:grid;place-items:center;font-style:normal;font-size:16px}
+.ac .bd{max-height:0;overflow:hidden;transition:max-height .5s,padding .5s;padding:0 24px 0 72px;color:var(--mute);font-size:15px;line-height:1.6}
+.ac.on{background:linear-gradient(135deg,#eef6ff,#f0fbf4);border-color:rgba(0,113,227,.25);box-shadow:0 20px 40px -26px rgba(0,80,200,.5)}
+.ac.on .bd{max-height:140px;padding-bottom:22px}
+.ac .pb{height:3px;background:var(--grad);width:0}.ac.on .pb{animation:acfill 7s linear forwards}
+@keyframes acfill{to{width:100%}}
+.rphone{width:340px;height:600px;margin:0 auto;border-radius:52px;background:#fff;padding:12px;box-shadow:0 0 0 1px rgba(0,0,0,.06),0 60px 100px -40px rgba(0,50,140,.45),inset 0 0 0 6px #f1f3f8}
+.rscr{height:100%;border-radius:42px;background:linear-gradient(180deg,#fff,#f6f9ff);overflow:hidden;display:flex;flex-direction:column}
+.rh{display:flex;align-items:center;gap:10px;padding:26px 18px 14px;border-bottom:1px solid var(--line)}
+.rh .av{width:38px;height:38px;border-radius:50%;background:var(--grad);display:grid;place-items:center;color:#fff;font-weight:700}
+.rh b{display:block;font-size:14.5px}.rh small{font-size:12px;color:#34c759}
+.rchat{flex:1;padding:16px 14px;display:flex;flex-direction:column;justify-content:flex-end;gap:9px;overflow:hidden}
+.rm{max-width:82%;padding:10px 13px;border-radius:18px;font-size:13.5px;line-height:1.4;opacity:0;transform:translateY(14px) scale(.96);transition:all .5s cubic-bezier(.2,1.3,.4,1)}
+.rm.on{opacity:1;transform:none}
+.rm.in{align-self:flex-start;background:#eef1f6;border-bottom-left-radius:6px}
+.rm.out{align-self:flex-end;background:linear-gradient(135deg,#0071e3,#2b9cf2);color:#fff;border-bottom-right-radius:6px}
+.rdots{align-self:flex-end;display:flex;gap:4px;padding:12px 14px;border-radius:16px;background:#e3efff}
+.rdots i{width:6px;height:6px;border-radius:50%;background:#6aa8ef;animation:rb 1s infinite}.rdots i:nth-child(2){animation-delay:.15s}.rdots i:nth-child(3){animation-delay:.3s}
+@keyframes rb{40%{transform:translateY(-4px)}}
+.rin{margin:0 14px 18px;padding:12px 16px;border-radius:999px;border:1px solid var(--line);font-size:13px;color:#999}
+@media(max-width:900px){.roles{grid-template-columns:1fr}.rphone{display:none}}
 </style>
 </head>
 <body>
@@ -285,6 +310,14 @@ footer a:hover{color:var(--ink)}
     <div class="photo rv"><img class="par" style="object-position:18% center" src="assets/foto-noite.webp" alt="Cliente conversando pelo celular à noite em casa" loading="lazy"><div class="chip"><i></i> Respondido às 23:41</div></div>
   </div>
 </section>
+
+<!-- FUNÇÕES -->
+<section id="funcoes" style="background:var(--soft)"><div class="wrap">
+  <div class="center"><span class="eyebrow rv">Funções da IA</span><h2 class="rv">Seu time cresce sem contratar.</h2></div>
+  <div class="roles"><div class="acc" id="acc"></div>
+    <div class="rphone rv"><div class="rscr"><div class="rh"><span class="av">H</span><div><b id="roleName">Helora · Atendimento</b><small>● trabalhando</small></div></div><div class="rchat" id="roleChat"></div><div class="rin">Digite uma mensagem…</div></div></div>
+  </div>
+</div></section>
 
 <!-- 5. PERSONALIZAÇÃO -->
 <section class="dark">
@@ -485,6 +518,18 @@ document.getElementById("lead").addEventListener("submit",async e=>{e.preventDef
  try{const r=await fetch(API,{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify(d)});if(!r.ok)throw 0;
   f.querySelector(".fields").style.display="none";document.getElementById("ok").style.display="block"}
  catch{err.textContent="Não conseguimos enviar agora. Tente de novo em instantes.";err.style.display="block";b.disabled=false;b.textContent="Quero conhecer o Helora"}});
+(()=>{const W=t=>new Promise(r=>setTimeout(r,t));
+const R=[["💬","Atendimento","Responde na hora, entende áudio e tira dúvidas com o que você ensinou.",[["in","Qual o horário de vocês?"],["out","Das 8h às 18h, mas eu respondo a qualquer hora 😉"],["in","Ótimo! Vocês entregam?"],["out","Entregamos sim. Qual o seu CEP?"]]],
+["◎","Pré-vendas","Qualifica cada lead e já marca a reunião na agenda do vendedor.",[["out","Você já vende hoje ou está começando?"],["in","Já vendo, uns 300 leads por mês"],["out","Perfeito. Amanhã às 14h com o vendedor, pode ser?"],["in","Fechado!"]]],
+["💲","Cobranças","Lembra o vencimento, manda o boleto e avisa a equipe quando pagar.",[["out","Oi, Carla! Sua parcela vence amanhã. Segue o boleto 📄"],["in","Já paguei, segue o comprovante"],["out","Recebido! Obrigada, Carla 💙"]]],
+["🔁","Pós-venda","Acompanha o cliente depois da venda e avisa a hora de renovar.",[["out","Oi, Pedro! Seu plano renova em 30 dias. Quer que eu prepare?"],["in","Quero sim, com o mesmo valor?"],["out","Já te mando as opções 😉"]]],
+["🎧","Suporte","Resolve as dúvidas comuns e chama um humano quando precisa.",[["in","Não consigo acessar minha conta"],["out","Te ajudo! Enviei o link para criar uma nova senha 🔐"],["in","Deu certo, valeu!"]]]];
+const acc=document.getElementById("acc");acc.innerHTML=R.map((r,i)=>`<div class="ac${i?"":" on"}"><h4><i>${r[0]}</i>${r[1]}</h4><div class="bd">${r[2]}</div><div class="pb"></div></div>`).join("");
+const acs=[...acc.children],box=document.getElementById("roleChat");let cur=0,tm,run=0;
+async function play(i){const id=++run;box.innerHTML="";for(const[d,t]of R[i][3]){if(id!==run)return;if(d==="out"){const k=document.createElement("div");k.className="rdots";k.innerHTML="<i></i><i></i><i></i>";box.appendChild(k);await W(900);k.remove();if(id!==run)return}
+const m=document.createElement("div");m.className="rm "+d;m.textContent=t;box.appendChild(m);requestAnimationFrame(()=>requestAnimationFrame(()=>m.classList.add("on")));await W(1300)}}
+function set(i){cur=i;acs.forEach((a,j)=>{a.classList.toggle("on",j===i);const b=a.querySelector(".pb");b.style.animation="none";b.offsetHeight;b.style.animation=""});document.getElementById("roleName").textContent="Helora · "+R[i][1];play(i);clearTimeout(tm);tm=setTimeout(()=>set((cur+1)%R.length),7000)}
+acs.forEach((a,i)=>a.onclick=()=>set(i));set(0)})();
 </script>
 </body>
 </html>
