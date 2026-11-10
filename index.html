@@ -4,486 +4,326 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Helora · Atendimento, CRM e IA em um só lugar</title>
-<meta name="description" content="WhatsApp, Instagram e Messenger num só painel, CRM de vendas e uma IA que atende seus clientes 24h. Para empresas que vendem e atendem pelo WhatsApp.">
-<meta property="og:title" content="Helora · Atendimento, CRM e IA em um só lugar">
-<meta property="og:description" content="Você conversa. A Helora organiza, responde e vende junto com você.">
+<meta name="description" content="WhatsApp, Instagram e Messenger num só painel, CRM de vendas e uma IA que atende seus clientes 24h.">
+<meta property="og:title" content="Helora · Você conversa. A Helora faz.">
 <meta property="og:image" content="https://heloracrm.com.br/assets/app-conversas.webp">
 <link rel="icon" href="assets/favicon.png">
-<link rel="stylesheet" href="assets/hero-art.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--blue:#0071e3;--blue2:#0062c4;--navy:#0062c4;--sky:#5ac8fa;--green:#34c759;--ink:#1d1d1f;--mute:#6e6e73;--line:rgba(0,0,0,.08);--soft:#f5f5f7;--grad:linear-gradient(90deg,#0071e3,#5ac8fa 55%,#34c759)}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;font-family:Inter,-apple-system,system-ui,sans-serif;color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased;line-height:1.5;overflow-x:hidden}
-a{color:inherit;text-decoration:none}
-img,video{max-width:100%;display:block}
-.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:52px;padding:0 26px;border-radius:999px;font-weight:600;font-size:15.5px;border:0;cursor:pointer;transition:transform .2s,box-shadow .25s,background .2s;font-family:inherit;white-space:nowrap}
+:root{--b:#0071e3;--g:#34c759;--ink:#16171d;--mute:#6b6f7b;--line:rgba(0,0,0,.07);--soft:#f6f8fc;--grad:linear-gradient(90deg,#0071e3,#3aa8f2 55%,#34c759)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:Poppins,system-ui,sans-serif;color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}img,video{display:block;max-width:100%}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+h1,h2{font-weight:400;letter-spacing:-.035em;margin:0}h1 b,h2 b{font-weight:700}
+.gt{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+h2{font-size:clamp(32px,4.4vw,56px);line-height:1.08}
+.lead{color:var(--mute);font-size:clamp(15px,1.3vw,18px);line-height:1.6;margin:16px auto 0;max-width:600px}
+.c{text-align:center}section{position:relative;padding:120px 0}
+.btn{display:inline-flex;align-items:center;gap:10px;height:50px;padding:0 24px;border-radius:999px;font:600 15px Poppins,sans-serif;border:0;cursor:pointer;transition:transform .25s}
 .btn:hover{transform:translateY(-2px)}
-.btn-p{background:var(--blue);color:#fff;box-shadow:0 14px 30px -12px rgba(0,113,227,.8)}
-.btn-w{background:#fff;color:var(--blue2);box-shadow:0 14px 30px -12px rgba(0,0,0,.45)}
-.btn-g{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
-.btn-g:hover{background:rgba(255,255,255,.22)}
-.eyebrow{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-.eyebrow.w{background:none;color:#e3f6ff}
-h1,h2,h3{font-weight:800;letter-spacing:-.03em}
-h2{font-size:clamp(32px,4.6vw,58px);line-height:1.04;margin:12px 0 16px}
-.sub{font-size:clamp(16px,1.5vw,19px);color:var(--mute);max-width:640px;margin:0}
-.center{text-align:center}.center .sub{margin:0 auto}
-section{padding:120px 0;position:relative}
-.dark{background:linear-gradient(135deg,#0062c4,#0071e3 45%,#3aa8f2 85%,#34c759 140%);color:#fff}.dark .sub{color:rgba(255,255,255,.72)}
-/* nav */
-.nav{position:fixed;inset:0 0 auto;z-index:60;transition:background .35s,box-shadow .35s,transform .35s}
-.nav.solid{background:rgba(255,255,255,.85);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);box-shadow:0 1px 0 var(--line)}
-.nav .wrap{display:flex;align-items:center;height:72px;gap:30px}
-.nav .logo img{height:28px}.nav .logo .w{display:none}
-.nav.solid .logo .b{display:none}.nav.solid .logo .w{display:block}
-.nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0;font-size:14.5px;font-weight:500}
-.nav ul a{color:rgba(255,255,255,.88)}.nav.solid ul a{color:var(--ink)}
-.nav .sp{flex:1}
-.nav .enter{color:#fff;font-weight:600;font-size:14.5px}.nav.solid .enter{color:var(--blue)}
-.nav .btn{height:42px;padding:0 20px;font-size:14px}
-.nav.solid .btn-g{background:var(--blue);border-color:var(--blue)}
-@media(max-width:900px){.nav ul,.nav .enter{display:none}}
-/* hero */
-.hero{position:relative;min-height:100svh;display:flex;align-items:center;color:#fff;overflow:hidden;padding:110px 0 70px;background:linear-gradient(135deg,#0062c4 0%,#0071e3 35%,#3aa8f2 70%,#34c759 130%);background-size:200% 200%;animation:laBg 18s ease-in-out infinite}
-.hero .g{position:absolute;border-radius:50%;filter:blur(70px);opacity:.55;pointer-events:none}
-.hero .g1{width:520px;height:520px;background:#5ac8fa;top:-160px;right:-120px;animation:drift 14s ease-in-out infinite}
-.hero .g2{width:440px;height:440px;background:#34c759;bottom:-200px;left:-120px;opacity:.4;animation:drift 18s ease-in-out infinite reverse}
-@keyframes drift{50%{transform:translate(40px,30px)}}
-.hero-art{position:relative;min-height:620px;display:flex}
-.hero-art .login2-right{background:none!important;animation:none!important;padding:0;width:100%;min-height:620px}
-.hero-art .login2-glow,.hero-art .la-grid{display:none}
-.hero-art .la-scene > h2,.hero-art .la-scene > p,.hero-art .la-scene > .login2-pill{display:none}
-.hero-art .la-stage{max-width:560px;margin:0 auto}
-.hero .wrap{position:relative;z-index:2;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
-.tag{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:15px;opacity:.95}
-.tag img{width:30px;height:30px;border-radius:9px;background:#fff;padding:4px}
-.hero h1{font-size:clamp(38px,5vw,68px);line-height:1;margin:22px 0 22px}
-.hero h1 .hl{background:linear-gradient(90deg,#fff,#d6f3ff 45%,#c8ffdc);-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero p.lead{font-size:clamp(16px,1.5vw,19px);opacity:.88;max-width:560px;margin:0 0 34px}
-.ctas{display:flex;gap:12px;flex-wrap:wrap}
-.scroll-hint{position:absolute;left:50%;bottom:26px;z-index:3;transform:translateX(-50%);width:26px;height:42px;border:2px solid rgba(255,255,255,.5);border-radius:20px}
-.scroll-hint:after{content:"";position:absolute;left:50%;top:8px;width:4px;height:8px;margin-left:-2px;border-radius:2px;background:#fff;animation:sh 1.8s infinite}
-@keyframes sh{to{transform:translateY(14px);opacity:0}}
-/* chat card */
-.chat{position:relative;justify-self:start;margin-top:200px;width:min(340px,100%);border-radius:24px;background:rgba(6,24,60,.82);border:1px solid rgba(255,255,255,.2);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);padding:16px;box-shadow:0 40px 80px -30px rgba(0,0,0,.6)}
-.chat-h{display:flex;align-items:center;gap:10px;padding:4px 4px 12px;border-bottom:1px solid rgba(255,255,255,.15)}
-.chat-h .av{width:36px;height:36px;border-radius:50%;background:var(--grad);display:grid;place-items:center;font-weight:800}
-.chat-h small{display:block;color:#9ff0b8;font-size:12px}
-.msgs{display:flex;flex-direction:column;gap:8px;padding-top:12px;min-height:250px}
-.m{max-width:85%;padding:9px 12px;border-radius:16px;font-size:13.5px;line-height:1.4;opacity:0;transform:translateY(10px) scale(.95)}
-.m.show{opacity:1;transform:none;transition:all .45s cubic-bezier(.2,1.4,.4,1)}
-.m.in{background:#fff;color:var(--ink);align-self:flex-start;border-bottom-left-radius:4px}
-.m.out{background:#0a84ff;color:#fff;align-self:flex-end;border-bottom-right-radius:4px}
-.m b{display:block;font-size:11px;opacity:.85}
-.typing{align-self:flex-start;background:#fff;border-radius:14px;padding:11px 13px;display:none;gap:4px}
-.typing.show{display:flex}
-.typing i{width:6px;height:6px;border-radius:50%;background:#999;animation:dot 1s infinite}.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
-@keyframes dot{30%{transform:translateY(-4px)}}
-.badge{position:absolute;display:flex;align-items:center;gap:10px;padding:11px 15px;border-radius:16px;background:#fff;color:var(--ink);font-size:13px;font-weight:600;box-shadow:0 20px 40px -14px rgba(0,0,0,.5);opacity:0;transform:translateY(16px)}
-.badge.show{opacity:1;transform:none;transition:all .6s cubic-bezier(.2,1.3,.4,1)}
-.badge small{display:block;font-weight:500;color:var(--mute);font-size:11.5px}
-.badge .ic{width:30px;height:30px;border-radius:10px;display:grid;place-items:center;color:#fff;flex:none}
-.b1{left:-60px;top:-30px}.b2{right:-30px;bottom:-26px}.b3{left:-50px;bottom:70px}
-@media(max-width:980px){.hero .wrap{grid-template-columns:1fr}.hero-art{min-height:600px}}
-/* faixa */
-.facts{padding:34px 0;border-bottom:1px solid var(--line)}
-.facts .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.fact b{display:block;font-size:clamp(26px,3vw,38px);letter-spacing:-.03em;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-.fact span{color:var(--mute);font-size:14.5px}
-@media(max-width:760px){.facts .wrap{grid-template-columns:1fr 1fr}}
-/* video */
-.video-sec{padding:120px 0 140px;background:linear-gradient(180deg,#fff,#eef5ff)}
-.frame{margin:50px auto 0;max-width:1100px;border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 60px 120px -40px rgba(0,40,120,.45),0 0 0 1px rgba(0,0,0,.06);transform-origin:center top}
-.frame .bar{display:flex;align-items:center;gap:7px;height:34px;padding:0 14px;background:#f2f2f5;border-bottom:1px solid var(--line)}
-.frame .bar i{display:block;flex:none;width:11px;height:11px;border-radius:50%;background:#ff5f57}.frame .bar i:nth-child(2){background:#febc2e}.frame .bar i:nth-child(3){background:#28c840}
-.frame .bar span{margin:0 auto;font-size:12px;color:#8e8e93;background:#fff;border-radius:7px;padding:3px 16px;white-space:nowrap}
-.frame video,.frame img{width:100%;height:auto}
-/* split com foto */
-.split{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
-.split.rev .txt{order:2}
-.photo{position:relative;border-radius:28px;overflow:hidden;aspect-ratio:4/3.4;box-shadow:0 40px 80px -40px rgba(0,30,90,.5)}
-.photo img{width:100%;height:120%;object-fit:cover;will-change:transform}
-.photo .chip{position:absolute;left:20px;bottom:20px;display:flex;align-items:center;gap:10px;padding:12px 16px;border-radius:16px;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);font-weight:600;font-size:14px;box-shadow:0 20px 40px -18px rgba(0,0,0,.5)}
-.photo .chip i{width:10px;height:10px;border-radius:50%;background:var(--green);box-shadow:0 0 0 5px rgba(52,199,89,.2)}
-.list{list-style:none;padding:0;margin:28px 0 0;display:flex;flex-direction:column;gap:16px}
-.list li{display:flex;gap:14px;font-size:16px}
-.list li span.n{flex:none;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:13px;color:#fff;background:var(--blue)}
-.list b{display:block}.list small{color:var(--mute);font-size:15px}
-.dark .list small{color:rgba(255,255,255,.65)}
-@media(max-width:920px){.split{grid-template-columns:1fr;gap:40px}.split.rev .txt{order:0}}
-/* personalização */
-.persona{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:56px}
-.pc{padding:30px;border-radius:24px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);transition:transform .3s,background .3s}
-.pc:hover{transform:translateY(-6px);background:rgba(255,255,255,.1)}
-.pc .ico{width:48px;height:48px;border-radius:15px;display:grid;place-items:center;margin-bottom:18px;background:rgba(255,255,255,.2)}
-.pc .ico svg{width:24px;height:24px;color:#fff}
-.pc h3{margin:0 0 8px;font-size:20px}.pc p{margin:0;color:rgba(255,255,255,.88);font-size:15px}
-@media(max-width:860px){.persona{grid-template-columns:1fr}}
-/* casos (abas) */
-.tabs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:44px 0 30px}
-.tabs button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:12px 20px;font:inherit;font-weight:600;font-size:15px;cursor:pointer;transition:all .25s}
-.tabs button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
-.case{display:none;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:center}
-.case.on{display:grid;animation:fadeUp .6s cubic-bezier(.2,.8,.2,1)}
-@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
-.case h3{font-size:clamp(26px,3vw,38px);line-height:1.1;margin:0 0 14px}
-.case p{color:var(--mute);font-size:17px;margin:0 0 20px}
-.case .kpi{display:inline-flex;gap:10px;align-items:center;padding:12px 18px;border-radius:14px;background:var(--soft);font-weight:600}
-.case .shot{border-radius:18px;overflow:hidden;box-shadow:0 40px 80px -40px rgba(0,40,120,.45),0 0 0 1px var(--line)}
-@media(max-width:900px){.case.on{grid-template-columns:1fr}}
-/* galeria horizontal */
-.hscroll{overflow:hidden;background:var(--soft);color:var(--ink);padding:120px 0}
-.track{display:flex;gap:28px;padding:50px 20px 0 max(20px,calc((100vw - 1160px)/2));will-change:transform}
-.slide{flex:none;width:min(820px,82vw)}
-.slide .frame{margin:0;transform:none;box-shadow:0 40px 80px -30px rgba(0,0,0,.6)}
-.slide h4{margin:18px 0 4px;font-size:20px}.slide p{margin:0;color:var(--mute)}
-.slide.phone{width:min(300px,62vw)}
-.slide.phone .frame{border-radius:36px;border:8px solid #111}
-/* equipe */
-.mosaic{display:grid;grid-template-columns:1.3fr 1fr;grid-template-rows:auto auto;gap:18px}
-.mosaic .photo{aspect-ratio:auto;height:100%}
-.mosaic .big{grid-row:span 2;min-height:520px}
-.mosaic .sm{min-height:250px}
-@media(max-width:860px){.mosaic{grid-template-columns:1fr}.mosaic .big{min-height:360px}}
-/* meta */
-.meta{display:flex;align-items:center;gap:28px;padding:34px 40px;border-radius:28px;background:var(--soft);margin-top:60px}
-.meta .lg{flex:none;width:72px;height:72px;border-radius:20px;background:#fff;display:grid;place-items:center;box-shadow:0 10px 30px -14px rgba(0,0,0,.25)}
-.meta h3{margin:0 0 4px;font-size:22px}.meta p{margin:0;color:var(--mute)}
-@media(max-width:700px){.meta{flex-direction:column;text-align:center;padding:28px 22px}}
-/* celular */
-.mobile{background:linear-gradient(135deg,#0062c4 0%,#0071e3 40%,#3aa8f2 80%,#34c759 140%);color:#fff;overflow:hidden}
-.mobile .split{grid-template-columns:1.1fr .9fr}
-.ph{justify-self:center;width:min(320px,80vw);border-radius:44px;border:10px solid #0b0b0d;overflow:hidden;box-shadow:0 60px 100px -30px rgba(0,0,0,.8),0 0 0 2px #2a2a2e;transform:rotate(-4deg)}
-.pill2{display:inline-flex;gap:8px;align-items:center;margin-top:26px;padding:12px 18px;border-radius:14px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);font-weight:600;font-size:14.5px}
-@media(max-width:920px){.mobile .split{grid-template-columns:1fr}}
-/* segmentos */
-.segs{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:50px}
-.seg{padding:26px;border-radius:22px;background:#fff;border:1px solid var(--line);transition:transform .3s,box-shadow .3s}
-.seg:hover{transform:translateY(-6px);box-shadow:0 30px 50px -30px rgba(0,40,120,.35)}
-.seg .e{font-size:26px;width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:var(--soft);margin-bottom:14px}
-.seg h3{margin:0 0 6px;font-size:17px;letter-spacing:-.01em}.seg p{margin:0;color:var(--mute);font-size:14.5px}
-@media(max-width:960px){.segs{grid-template-columns:1fr 1fr}}@media(max-width:520px){.segs{grid-template-columns:1fr}}
-.seg-banner{position:relative;margin-top:22px;border-radius:26px;overflow:hidden;min-height:260px;display:flex;align-items:center;color:#fff}
-.seg-banner img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.seg-banner:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,98,196,.92),rgba(0,113,227,.25))}
-.seg-banner div{position:relative;z-index:1;padding:40px;max-width:560px}
-.seg-banner h3{margin:0 0 8px;font-size:clamp(24px,2.6vw,32px)}
-/* faq */
-.faq{max-width:800px;margin:40px auto 0}
-details{border-bottom:1px solid var(--line);padding:20px 4px}
-summary{cursor:pointer;font-weight:600;font-size:17px;list-style:none;display:flex;justify-content:space-between;gap:20px}
-summary::-webkit-details-marker{display:none}
-summary:after{content:"+";font-size:26px;line-height:1;color:var(--blue);transition:transform .25s}
-details[open] summary:after{transform:rotate(45deg)}
-details p{margin:10px 0 0;color:var(--mute);font-size:15.5px}
-/* final */
-.final{position:relative;color:#fff;overflow:hidden;padding:140px 0}
-.final-bg{position:absolute;inset:-10% 0;background:url(assets/foto-acordo.webp) center 30%/cover;will-change:transform}
-.final:after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(0,98,196,.95),rgba(0,113,227,.88) 50%,rgba(52,199,89,.7))}
-.final .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
-.final p{font-size:18px;opacity:.88}
-form.lead{background:#fff;color:var(--ink);border-radius:24px;padding:26px;display:flex;flex-direction:column;gap:12px;box-shadow:0 40px 80px -30px rgba(0,0,0,.6)}
-form.lead label{display:flex;flex-direction:column;gap:5px;font-size:13px;font-weight:600}
-form.lead input,form.lead select{height:48px;border-radius:12px;border:1px solid #d2d2d7;padding:0 14px;font:inherit;font-size:15px;font-weight:400;background:#fff;color:var(--ink)}
-form.lead input:focus,form.lead select:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 4px rgba(0,113,227,.15)}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.ok{display:none;text-align:center;padding:30px 10px}.ok b{display:block;font-size:20px;margin:10px 0 6px}
-.err{color:#c0392b;font-size:13px;display:none;margin:0}
-@media(max-width:880px){.final .wrap{grid-template-columns:1fr}.two{grid-template-columns:1fr}}
-footer{padding:50px 0 40px;color:var(--mute);font-size:14px}
-footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
-footer img{height:24px}footer nav{display:flex;gap:22px;flex-wrap:wrap}
-footer a:hover{color:var(--ink)}
-.credit{font-size:12px;color:#a1a1a6;text-align:center;margin-top:18px}
-/* revelar */
+.btn-p{background:linear-gradient(135deg,#0071e3,#2b9cf2);color:#fff;box-shadow:0 14px 30px -10px rgba(0,113,227,.7)}
+.glow{position:absolute;border-radius:50%;filter:blur(90px);pointer-events:none;opacity:.55}
+.nav{position:fixed;inset:0 0 auto;z-index:80;transition:background .3s,box-shadow .3s}
+.nav.s{background:rgba(255,255,255,.85);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:0 1px 0 var(--line)}
+.nav .wrap{display:flex;align-items:center;height:76px;gap:34px}.nav img{height:28px}
+.nav ul{display:flex;gap:28px;list-style:none;margin:0 auto;padding:0;font-size:14.5px;font-weight:500}
+.nav ul a:hover{color:var(--b)}.nav .in{font-weight:500;font-size:14.5px}.nav .btn{height:42px;font-size:14px;padding:0 20px}
+@media(max-width:920px){.nav ul,.nav .in{display:none}.nav .wrap{justify-content:space-between}}
+.float-cta{position:fixed;left:50%;bottom:22px;z-index:70;transform:translate(-50%,120px);display:flex;align-items:center;gap:10px;padding:8px 20px 8px 8px;border-radius:999px;background:rgba(255,255,255,.92);backdrop-filter:blur(14px);box-shadow:0 0 0 1.5px rgba(0,113,227,.35),0 18px 40px -14px rgba(0,60,160,.45);font-weight:600;font-size:14.5px;transition:transform .5s cubic-bezier(.2,1.3,.4,1)}
+.float-cta.on{transform:translate(-50%,0)}
+.orb{width:34px;height:34px;border-radius:50%;background:conic-gradient(#0071e3,#5ac8fa,#34c759,#0071e3);animation:spin 4s linear infinite;position:relative;flex:none}
+.orb:after{content:"";position:absolute;inset:5px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff,#d8efff)}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero{padding:150px 0 40px;overflow:hidden}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:7px 14px 7px 8px;border-radius:999px;background:#fff;border:1px solid var(--line);box-shadow:0 6px 18px -10px rgba(0,0,0,.2);font-size:13px;font-weight:500}
+.pill .orb{width:22px;height:22px}.pill .orb:after{inset:4px}
+.hero h1{font-size:clamp(36px,5vw,64px);line-height:1.08;margin:22px auto 0;max-width:900px}
+.prompt{margin:34px auto 0;max-width:620px;display:flex;align-items:center;gap:12px;padding:8px 8px 8px 18px;border-radius:999px;background:#fff;box-shadow:0 0 0 1.5px rgba(0,113,227,.25),0 20px 50px -20px rgba(0,80,200,.35)}
+.prompt .t{flex:1;text-align:left;font-size:15px;white-space:nowrap;overflow:hidden;min-height:22px}
+.prompt .t:after{content:"";display:inline-block;width:2px;height:18px;background:var(--b);vertical-align:-3px;margin-left:2px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}.prompt .btn{height:42px}
+.marq{margin:18px auto 0;max-width:760px;overflow:hidden;-webkit-mask:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.marq .row{display:flex;gap:10px;width:max-content;animation:mq 34s linear infinite}
+.marq span{display:inline-flex;align-items:center;gap:8px;padding:9px 15px;border-radius:999px;border:1px solid var(--line);background:#fff;font-size:13.5px;color:#444;white-space:nowrap}
+.marq span i{width:20px;height:20px;border-radius:50%;display:grid;place-items:center;font-size:11px;font-style:normal;background:#eaf4ff;color:var(--b)}
+@keyframes mq{to{transform:translateX(-50%)}}
+.stage{position:relative;margin:60px auto 0;height:600px;max-width:900px}
+.phone{position:absolute;left:50%;top:0;width:340px;height:640px;margin-left:-170px;border-radius:52px;background:#fff;padding:12px;box-shadow:0 0 0 1px rgba(0,0,0,.06),0 60px 100px -40px rgba(0,50,140,.45),inset 0 0 0 6px #f1f3f8}
+.scr{height:100%;border-radius:42px;background:linear-gradient(180deg,#fff,#f6f9ff);overflow:hidden;display:flex;flex-direction:column}
+.ph-h{display:flex;align-items:center;gap:10px;padding:26px 18px 14px;border-bottom:1px solid var(--line);text-align:left}
+.ph-h .av{width:38px;height:38px;border-radius:50%;background:var(--grad);display:grid;place-items:center;color:#fff;font-weight:700}
+.ph-h b{display:block;font-size:14.5px}.ph-h small{font-size:12px;color:var(--g)}
+.ph-h .wa{margin-left:auto;font-size:11px;font-weight:600;color:#1aa34a;background:#e7f9ee;border-radius:99px;padding:4px 9px}
+.chatbox{flex:1;padding:16px 14px;display:flex;flex-direction:column;justify-content:flex-end;gap:9px;overflow:hidden;text-align:left}
+.msg{max-width:82%;padding:10px 13px;border-radius:18px;font-size:13.5px;line-height:1.4;opacity:0;transform:translateY(14px) scale(.96);transition:all .5s cubic-bezier(.2,1.3,.4,1)}
+.msg.on{opacity:1;transform:none}
+.msg.in{align-self:flex-start;background:#eef1f6;border-bottom-left-radius:6px}
+.msg.out{align-self:flex-end;background:linear-gradient(135deg,#0071e3,#2b9cf2);color:#fff;border-bottom-right-radius:6px}
+.dots{align-self:flex-end;display:none;gap:4px;padding:12px 14px;border-radius:16px;background:#e3efff}
+.dots.on{display:flex}.dots i{width:6px;height:6px;border-radius:50%;background:#6aa8ef;animation:bounce 1s infinite}.dots i:nth-child(2){animation-delay:.15s}.dots i:nth-child(3){animation-delay:.3s}
+@keyframes bounce{40%{transform:translateY(-4px)}}
+.ph-in{margin:0 14px 18px;padding:12px 16px;border-radius:999px;background:#fff;border:1px solid var(--line);font-size:13px;color:#999;display:flex;justify-content:space-between;align-items:center}
+.ph-in i{width:28px;height:28px;border-radius:50%;background:var(--g);display:grid;place-items:center;color:#fff;font-style:normal;font-size:12px}
+.fc{position:absolute;display:flex;align-items:center;gap:12px;padding:14px 18px;border-radius:18px;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);box-shadow:0 24px 50px -20px rgba(0,40,120,.35),0 0 0 1px var(--line);font-size:14px;font-weight:600;text-align:left;opacity:0;filter:blur(8px);transform:translateY(20px) scale(.95);transition:all .8s cubic-bezier(.2,1.2,.3,1)}
+.fc.on{opacity:1;filter:none;transform:none}
+.fc small{display:block;font-weight:400;font-size:12px;color:var(--mute)}
+.fc .ic{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;color:#fff;flex:none}
+.fc1{left:0;top:120px}.fc2{right:0;top:60px}.fc3{right:20px;top:330px}.fc4{left:30px;top:380px}
+@media(max-width:860px){.fc{font-size:12px;padding:10px 12px}.fc .ic{width:30px;height:30px}.fc1,.fc4{left:-6px}.fc2,.fc3{right:-6px}}
+.band{padding:40px 0 20px}
+.band p{text-align:center;color:var(--mute);font-size:14px;margin:0 0 18px}
+.band .marq{max-width:none}.band .row{animation-duration:40s}
+.band .marq span{font-size:18px;font-weight:500;border:0;background:none;color:#9aa0ab;padding:6px 26px}
+.vframe{position:relative;margin:56px auto 0;max-width:960px;padding:14px;border-radius:30px;background:linear-gradient(135deg,rgba(0,113,227,.12),rgba(52,199,89,.12));box-shadow:0 0 0 1px rgba(0,113,227,.18),0 50px 100px -50px rgba(0,60,160,.5)}
+.vframe video{width:100%;border-radius:20px;background:#fff}
+.vbar{position:absolute;left:30px;right:30px;bottom:30px;display:flex;align-items:center;justify-content:space-between;padding:10px 12px 10px 14px;border-radius:16px;background:rgba(255,255,255,.9);backdrop-filter:blur(10px);box-shadow:0 10px 30px -12px rgba(0,0,0,.25);font-weight:600;font-size:14.5px}
+.vbar span{display:flex;align-items:center;gap:10px}.vbar .orb{width:26px;height:26px}.vbar .orb:after{inset:4px}
+.vbar button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 14px;font:500 13px Poppins;cursor:pointer}
+.hello{position:relative;margin:56px auto 0;max-width:1000px;height:440px;border-radius:32px;overflow:hidden;background:#eef5ff}
+.hello img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:left top;filter:blur(3px) saturate(.6);opacity:.35}
+.hello-card{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(720px,92%);padding:40px 30px 30px;border-radius:30px;background:rgba(255,255,255,.78);backdrop-filter:blur(20px);box-shadow:0 0 0 1.5px rgba(0,113,227,.2),0 40px 80px -30px rgba(0,60,160,.35)}
+.hello-card h3{margin:0;font-weight:400;font-size:clamp(20px,2.4vw,28px)}
+.roles{display:grid;grid-template-columns:1fr 380px;gap:70px;align-items:center;margin-top:60px}
+.acc{display:flex;flex-direction:column;gap:10px}
+.ac{border-radius:20px;border:1px solid var(--line);background:#fff;overflow:hidden;cursor:pointer;transition:all .4s}
+.ac h4{margin:0;padding:20px 24px;font-weight:500;font-size:19px;display:flex;align-items:center;gap:14px}
+.ac h4 i{width:34px;height:34px;border-radius:11px;background:var(--soft);display:grid;place-items:center;font-style:normal;font-size:16px}
+.ac .bd{max-height:0;overflow:hidden;transition:max-height .5s,padding .5s;padding:0 24px 0 72px;color:var(--mute);font-size:15px;line-height:1.6}
+.ac.on{background:linear-gradient(135deg,#eef6ff,#f0fbf4);border-color:rgba(0,113,227,.25);box-shadow:0 20px 40px -26px rgba(0,80,200,.5)}
+.ac.on .bd{max-height:140px;padding-bottom:22px}
+.ac .bar{height:3px;background:var(--grad);width:0}.ac.on .bar{animation:fill 7s linear forwards}
+@keyframes fill{to{width:100%}}
+.roles .phone{position:relative;left:auto;margin:0 auto;width:340px;height:600px}
+@media(max-width:900px){.roles{grid-template-columns:1fr}.roles .phone{display:none}}
+.cine{min-height:760px;display:flex;align-items:center;overflow:hidden;color:#fff}
+.cine .bg{position:absolute;inset:-12% 0;background:url(assets/foto-equipe.webp) center/cover}
+.cine:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,40,110,.85),rgba(0,98,196,.5) 55%,rgba(0,113,227,.2))}
+.cine .wrap{position:relative;z-index:2;display:grid;grid-template-columns:420px 1fr;gap:50px;align-items:center;width:100%}
+.cine h2{color:#fff;margin-bottom:30px}
+.gl{display:flex;flex-direction:column;gap:10px}
+.gp{border-radius:999px;padding:18px 24px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(14px);cursor:pointer;transition:all .4s}
+.gp b{font-weight:500;letter-spacing:.06em;text-transform:uppercase;font-size:14px}
+.gp .x{display:none;font-size:15px;color:var(--mute);margin-top:8px;line-height:1.55}
+.gp.on{border-radius:26px;background:#fff;color:var(--ink);padding:24px}
+.gp.on b{display:block;font-size:24px;letter-spacing:-.02em;text-transform:none}.gp.on .x{display:block}
+.laptop{justify-self:end;width:min(640px,100%);transform:perspective(1400px) rotateY(-14deg) rotateX(6deg);border-radius:16px;overflow:hidden;box-shadow:0 60px 100px -30px rgba(0,0,0,.7),0 0 0 8px #1b1c20}
+.laptop img{transition:opacity .3s}
+@media(max-width:960px){.cine .wrap{grid-template-columns:1fr}.laptop{transform:none!important;justify-self:center}}
+.ftabs{display:inline-flex;gap:4px;padding:6px;border-radius:999px;background:var(--soft);border:1px solid var(--line);margin-top:40px;flex-wrap:wrap;justify-content:center}
+.ftabs button{border:0;background:none;border-radius:999px;padding:10px 18px;font:500 14px Poppins;color:var(--mute);cursor:pointer;transition:all .3s}
+.ftabs button.on{background:#fff;color:var(--b);box-shadow:0 6px 16px -8px rgba(0,80,200,.5)}
+.fpanel{display:none;margin-top:36px;border-radius:32px;border:1px solid var(--line);background:linear-gradient(180deg,#fff,#f7faff);padding:50px;grid-template-columns:.8fr 1.2fr;gap:50px;align-items:center;text-align:left}
+.fpanel.on{display:grid;animation:up .6s cubic-bezier(.2,.8,.2,1)}
+@keyframes up{from{opacity:0;transform:translateY(24px)}}
+.fpanel .ico{width:46px;height:46px;border-radius:14px;background:var(--grad);display:grid;place-items:center;color:#fff;font-size:20px}
+.fpanel h3{font-size:clamp(28px,3vw,42px);font-weight:400;letter-spacing:-.03em;margin:18px 0 12px}
+.fpanel p{color:var(--mute);line-height:1.65;margin:0}
+.fpanel .shot{border-radius:18px;overflow:hidden;box-shadow:0 40px 70px -40px rgba(0,50,140,.55),0 0 0 1px var(--line)}
+@media(max-width:880px){.fpanel{grid-template-columns:1fr;padding:28px}}
+.big{position:relative;margin-top:60px;border-radius:36px;padding:60px 0 0 60px;background:linear-gradient(135deg,#e6f2ff,#e9fbef);overflow:hidden}
+.big .shot{border-radius:18px 0 0 0;overflow:hidden;box-shadow:0 40px 80px -30px rgba(0,50,140,.45)}
+.big .fc{opacity:1;filter:none;transform:none}
+@media(max-width:700px){.big{padding:30px 0 0 24px}}
+.mob{background:linear-gradient(135deg,#0062c4,#0071e3 45%,#3aa8f2 85%,#34c759 140%);color:#fff;overflow:hidden}
+.mob .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.mob h2{color:#fff}.mob .lead{color:rgba(255,255,255,.88);margin-left:0}
+.mob .phone{position:relative;left:auto;margin:0 auto;width:320px;height:640px;padding:10px;background:#0d0e12;box-shadow:0 60px 100px -30px rgba(0,0,0,.6)}
+.mob .phone img{border-radius:42px;height:100%;width:100%;object-fit:cover;object-position:top}
+@media(max-width:860px){.mob .wrap{grid-template-columns:1fr}}
+.end{text-align:center;overflow:hidden}
+form.lf{margin:44px auto 0;max-width:640px;display:grid;grid-template-columns:1fr 1fr;gap:12px;text-align:left}
+form.lf input,form.lf select{height:54px;border-radius:16px;border:1px solid #d9dde5;padding:0 18px;font:400 15px Poppins;background:#fff;width:100%}
+form.lf input:focus,form.lf select:focus{outline:none;border-color:var(--b);box-shadow:0 0 0 4px rgba(0,113,227,.12)}
+form.lf .full{grid-column:1/-1}form.lf .btn{justify-content:center;height:56px;width:100%}
+.ok{display:none;grid-column:1/-1;text-align:center;padding:20px}
+.err{grid-column:1/-1;color:#c0392b;font-size:13px;display:none;margin:0}
+@media(max-width:600px){form.lf{grid-template-columns:1fr}}
+footer{padding:40px 0 90px;color:var(--mute);font-size:13.5px;border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}footer img{height:22px}
 .rv{opacity:0;transform:translateY(40px)}
-.no-js .rv{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1!important;transform:none!important}.m,.badge{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.msg,.fc{opacity:1!important;transform:none!important;filter:none!important}}
 </style>
 </head>
 <body>
+<header class="nav" id="nav"><div class="wrap">
+  <a href="#"><img src="assets/helora-wordmark.png" alt="Helora"></a>
+  <ul><li><a href="#video">Ver em ação</a></li><li><a href="#funcoes">Funções</a></li><li><a href="#recursos">Recursos</a></li><li><a href="#contato">Contato</a></li></ul>
+  <a class="in" href="https://app1.heloracrm.com.br">Entrar</a>
+  <a class="btn btn-p" href="#contato">Falar com um consultor</a>
+</div></header>
+<a class="float-cta" id="fcta" href="#contato"><span class="orb"></span>Falar com um consultor</a>
 
-<header class="nav" id="nav">
-  <div class="wrap">
-    <a href="#" class="logo" aria-label="Helora">
-      <img class="b" src="assets/helora-wordmark.png" alt="Helora" style="filter:brightness(0) invert(1)">
-      <img class="w" src="assets/helora-wordmark.png" alt="Helora">
-    </a>
-    <ul>
-      <li><a href="#video">Ver funcionando</a></li>
-      <li><a href="#ia">Helora IA</a></li>
-      <li><a href="#plataforma">Plataforma</a></li>
-      <li><a href="#segmentos">Para quem</a></li>
-      <li><a href="#duvidas">Dúvidas</a></li>
-    </ul>
-    <span class="sp"></span>
-    <a class="enter" href="https://app1.heloracrm.com.br">Entrar</a>
-    <a class="btn btn-g" href="#contato">Quero conhecer</a>
-  </div>
-</header>
-
-<!-- 1. HERO -->
-<section class="hero">
-  <div class="g g1"></div><div class="g g2"></div>
-  <div class="wrap">
-    <div class="hero-txt">
-      <span class="tag"><img src="assets/helora-icon.png" alt="">Você conversa. A Helora organiza e vende junto.</span>
-      <h1>Tudo que sua empresa precisa para <span class="hl">vender e atender</span>, em um só lugar.</h1>
-      <p class="lead">WhatsApp, Instagram e Messenger num só painel, CRM de vendas, campanhas e uma IA que responde seus clientes a qualquer hora, do jeito da sua empresa.</p>
-      <div class="ctas">
-        <a class="btn btn-w" href="#contato">Quero uma demonstração</a>
-        <a class="btn btn-g" href="#video"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg> Ver rodando</a>
-      </div>
-    </div>
-    <div class="hero-art" id="heroArt" aria-hidden="true"></div>
-  </div>
-  <span class="scroll-hint" aria-hidden="true"></span>
-</section>
-
-<!-- 2. FATOS -->
-<div class="facts">
-  <div class="wrap">
-    <div class="fact rv"><b>24h</b><span>de atendimento com a Helora IA</span></div>
-    <div class="fact rv"><b>3 canais</b><span>WhatsApp, Instagram e Messenger juntos</span></div>
-    <div class="fact rv"><b>API oficial</b><span>conexão estável pela Meta</span></div>
-    <div class="fact rv"><b>Equipe toda</b><span>no mesmo número, com setores</span></div>
-  </div>
-</div>
-
-<!-- 3. VÍDEO -->
-<section class="video-sec" id="video">
-  <div class="wrap center">
-    <span class="eyebrow rv">Veja na prática</span>
-    <h2 class="rv">O Helora rodando numa operação de verdade.</h2>
-    <p class="sub rv">Conversa chega, a IA atende, o negócio entra no funil e a equipe recebe a tarefa. Tudo no mesmo lugar.</p>
-  </div>
-  <div class="wrap">
-    <div class="frame" id="videoFrame"><div class="bar"><i></i><i></i><i></i><span>app1.heloracrm.com.br</span></div>
-      <video src="assets/demo.mp4" poster="assets/demo-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Demonstração do Helora: conversas, CRM e atividades"></video>
+<section class="hero c">
+  <div class="glow" style="width:620px;height:620px;background:#bfe0ff;left:-180px;top:-120px"></div>
+  <div class="glow" style="width:560px;height:560px;background:#c9f5d6;right:-160px;top:40px"></div>
+  <div class="wrap" style="position:relative">
+    <span class="pill rv"><span class="orb"></span>Você conversa. A Helora faz.</span>
+    <h1 class="rv">Tudo que seu <b>atendimento e vendas</b> precisam, <b class="gt">em um só lugar.</b></h1>
+    <div class="prompt rv"><span class="t" id="typed"></span><a class="btn btn-p" href="#contato">Quero conhecer</a></div>
+    <div class="marq rv"><div class="row" id="chips"></div></div>
+    <div class="stage" aria-hidden="true">
+      <div class="phone"><div class="scr">
+        <div class="ph-h"><span class="av">H</span><div><b>Helora IA</b><small>● online</small></div><span class="wa">WhatsApp</span></div>
+        <div class="chatbox" id="heroChat"></div>
+        <div class="ph-in">Digite uma mensagem…<i>➤</i></div>
+      </div></div>
+      <div class="fc fc1"><span class="ic" style="background:#34c759">✓</span><div>Lead qualificado<small>em poucos segundos</small></div></div>
+      <div class="fc fc2"><span class="ic" style="background:#0071e3">◎</span><div>Negócio criado<small>Funil de vendas · R$ 4.800</small></div></div>
+      <div class="fc fc3"><span class="ic" style="background:#ff9f0a">📅</span><div>Reunião agendada<small>Amanhã, 14:00 · Ana</small></div></div>
+      <div class="fc fc4"><span class="ic" style="background:#5ac8fa">🎙</span><div>Áudio entendido<small>respondido em 2s</small></div></div>
     </div>
   </div>
 </section>
 
-<!-- 4. IA 24H -->
-<section id="ia">
-  <div class="wrap split">
-    <div class="txt">
-      <span class="eyebrow rv">Seu time cresce sem contratar</span>
-      <h2 class="rv">Sua empresa atendendo até de madrugada.</h2>
-      <p class="sub rv">O cliente manda mensagem às 23h e recebe resposta na hora. A Helora IA responde, entende áudio, faz as perguntas certas e deixa tudo pronto para sua equipe de manhã.</p>
-      <ul class="list">
-        <li class="rv"><span class="n">1</span><div><b>Responde na hora</b><small>Texto e áudio, no tom da sua marca, sem fila de espera.</small></div></li>
-        <li class="rv"><span class="n">2</span><div><b>Qualifica e agenda</b><small>Descobre o que o cliente precisa, cria o negócio no CRM e marca o horário.</small></div></li>
-        <li class="rv"><span class="n">3</span><div><b>Passa para o humano</b><small>Quando precisa de um especialista, transfere com o resumo da conversa.</small></div></li>
-      </ul>
-    </div>
-    <div class="photo rv"><img class="par" style="object-position:18% center" src="assets/foto-noite.webp" alt="Cliente conversando pelo celular à noite em casa" loading="lazy"><div class="chip"><i></i> Respondido às 23:41</div></div>
-  </div>
-</section>
+<div class="band"><p>Feito para quem vende pelo WhatsApp</p><div class="marq"><div class="row" id="segs"></div></div></div>
 
-<!-- 5. PERSONALIZAÇÃO -->
-<section class="dark">
-  <div class="wrap center">
-    <span class="eyebrow w rv">Personalização</span>
-    <h2 class="rv">Sua IA, do seu jeito.</h2>
-    <p class="sub rv">Você ensina uma vez e ela segue as regras da sua empresa em cada conversa.</p>
+<section id="video" class="c" style="padding-top:90px"><div class="wrap">
+  <h2 class="rv">Veja a Helora<br><b class="gt">em uma operação real</b></h2>
+  <div class="vframe rv" id="vf">
+    <video id="vid" src="assets/demo.mp4" poster="assets/demo-poster.jpg" autoplay muted loop playsinline preload="metadata"></video>
+    <div class="vbar"><span><span class="orb"></span>Veja a Helora em ação</span><button type="button" id="vfull">Tela cheia</button></div>
   </div>
-  <div class="wrap persona">
-    <div class="pc rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5v14Z"/><path d="M8 7h8M8 11h6"/></svg></div><h3>Aprende com seus materiais</h3><p>Envie site, catálogo, tabela de preços e perguntas frequentes. Ela responde com base nisso.</p></div>
-    <div class="pc rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a8 8 0 0 1-11.8 7L3 21l2-6A8 8 0 1 1 21 12Z"/></svg></div><h3>Tom de voz da marca</h3><p>Mais formal ou mais descontraída, com ou sem emoji. Você escolhe como ela fala.</p></div>
-    <div class="pc rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg></div><h3>Regras e limites</h3><p>Defina o que ela pode prometer, quando chamar um humano e em que horário atende.</p></div>
-  </div>
-</section>
+</div></section>
 
-<!-- 6. CASOS -->
-<section id="casos">
-  <div class="wrap center">
-    <span class="eyebrow rv">Na rotina</span>
-    <h2 class="rv">O que a Helora resolve na sua empresa.</h2>
-  </div>
-  <div class="wrap">
-    <div class="tabs rv" role="tablist">
-      <button class="on" data-t="0" role="tab">Atendimento</button>
-      <button data-t="1" role="tab">Vendas</button>
-      <button data-t="2" role="tab">Follow-up</button>
-      <button data-t="3" role="tab">No celular</button>
-    </div>
-    <div class="case on"><div><h3>Nenhuma mensagem sem resposta.</h3><p>Todas as conversas do WhatsApp, Instagram e Messenger numa caixa só, divididas por setor, com etiquetas, transferência e histórico completo.</p><span class="kpi">💬 Vários atendentes no mesmo número</span></div><div class="shot"><img src="assets/app-conversas.webp" alt="Tela de conversas do Helora" loading="lazy"></div></div>
-    <div class="case"><div><h3>Seu funil andando, sem planilha.</h3><p>Cada conversa vira um negócio. Você vê em que etapa está cada cliente, quanto vale e quem é o responsável.</p><span class="kpi">📈 Funil, valores e responsáveis</span></div><div class="shot"><img src="assets/app-crm.webp" alt="Funil de vendas do CRM Helora" loading="lazy"></div></div>
-    <div class="case"><div><h3>Nenhum cliente esquecido.</h3><p>Ligações, propostas e cobranças com prazo e responsável. O que está atrasado aparece em vermelho e a equipe é avisada.</p><span class="kpi">⏰ Atrasadas, hoje e próximos dias</span></div><div class="shot"><img src="assets/app-atividades.webp" alt="Atividades do CRM Helora" loading="lazy"></div></div>
-    <div class="case"><div><h3>Atenda de onde estiver.</h3><p>O Helora funciona no celular e pode ser instalado na tela inicial como um aplicativo. Responda, mova negócios e acompanhe a equipe.</p><span class="kpi">📱 No computador e no celular</span></div><div class="shot" style="max-width:340px;margin:0 auto;border-radius:36px;border:8px solid #111"><img src="assets/app-celular.webp" alt="Helora no celular" loading="lazy"></div></div>
-  </div>
-</section>
-
-<!-- 7. PLATAFORMA (rolagem horizontal) -->
-<section class="hscroll" id="plataforma">
-  <div class="wrap">
-    <span class="eyebrow rv">Plataforma completa</span>
-    <h2 class="rv" style="max-width:760px">Atendimento, CRM, campanhas e relatórios. Tudo conversa entre si.</h2>
-  </div>
-  <div class="track" id="track">
-    <div class="slide"><div class="frame"><div class="bar"><i></i><i></i><i></i><span>Conversas</span></div><img src="assets/app-conversas.webp" alt="" loading="lazy"></div><h4>Atendimento multicanal</h4><p>IA e equipe na mesma conversa.</p></div>
-    <div class="slide"><div class="frame"><div class="bar"><i></i><i></i><i></i><span>CRM</span></div><img src="assets/app-crm.webp" alt="" loading="lazy"></div><h4>CRM de vendas</h4><p>Funis do jeito do seu negócio.</p></div>
-    <div class="slide"><div class="frame"><div class="bar"><i></i><i></i><i></i><span>Atividades</span></div><img src="assets/app-atividades.webp" alt="" loading="lazy"></div><h4>Atividades e lembretes</h4><p>Prazos claros para toda a equipe.</p></div>
-    <div class="slide phone"><div class="frame"><img src="assets/app-celular.webp" alt="" loading="lazy"></div><h4>No celular</h4><p>Leve a operação no bolso.</p></div>
-  </div>
-</section>
-
-<!-- 8. EQUIPE + IA -->
-<section>
-  <div class="wrap split">
-    <div class="txt">
-      <span class="eyebrow rv">Time e IA juntos</span>
-      <h2 class="rv">A IA cuida do repetitivo. Sua equipe, de fechar.</h2>
-      <p class="sub rv">Enquanto a Helora IA atende, qualifica e organiza, seus vendedores ficam livres para o que só gente faz: conversar, negociar e comemorar cada venda.</p>
-      <ul class="list">
-        <li class="rv"><span class="n">✓</span><div><b>Cada um vê o que é seu</b><small>Conversas e negócios por responsável e por setor.</small></div></li>
-        <li class="rv"><span class="n">✓</span><div><b>Gestor acompanha tudo</b><small>Relatórios de vendas, atendimento e atividades da equipe.</small></div></li>
-        <li class="rv"><span class="n">✓</span><div><b>Automações no funil</b><small>Mova cards, crie tarefas e envie mensagens sozinho.</small></div></li>
-      </ul>
-    </div>
-    <div class="mosaic">
-      <div class="photo big rv"><img class="par" src="assets/foto-equipe.webp" alt="Equipe de vendas comemorando no escritório" loading="lazy"><div class="chip"><i></i> Venda fechada · R$ 18.900</div></div>
-      <div class="photo sm rv"><img class="par" src="assets/foto-negocio.webp" alt="Dona de negócio atendendo cliente pelo celular" loading="lazy"></div>
+<section class="c" style="padding-top:40px"><div class="wrap">
+  <h2 class="rv">Um pedido e sua operação<br><b>está rodando.</b></h2>
+  <div class="hello rv"><img src="assets/app-conversas.webp" alt="" aria-hidden="true">
+    <div class="hello-card"><h3>Olá! Sou a <b>Helora IA</b>. Por onde começamos?</h3>
+      <div class="prompt"><span class="t" id="typed2"></span><a class="btn btn-p" href="#contato">Começar</a></div>
+      <div class="marq"><div class="row" id="chips2"></div></div>
     </div>
   </div>
-  <div class="wrap">
-    <div class="meta rv">
-      <div class="lg"><svg width="40" height="40" viewBox="0 0 24 24" fill="#25D366"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 .9c.3.2.5.2.5.4.1.1.1.7-.1 1.4Z"/></svg></div>
-      <div><h3>Conexão pela API oficial do WhatsApp</h3><p>Seu número conectado direto pela Meta: estável, seguro e dentro das regras da plataforma. Também funciona com Instagram e Messenger.</p></div>
-    </div>
-  </div>
-</section>
+</div></section>
 
-<!-- 9. CELULAR -->
-<section class="mobile">
-  <div class="wrap split">
-    <div class="txt">
-      <span class="eyebrow w rv">Mobilidade</span>
-      <h2 class="rv">Tudo isso na palma da sua mão.</h2>
-      <p class="sub rv">Atenda clientes, mova negócios no funil, veja as atividades do dia e acompanhe a equipe pelo celular, de onde estiver.</p>
-      <span class="pill2 rv"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg> Instale na tela inicial do iPhone ou Android</span>
-    </div>
-    <div class="ph rv"><img src="assets/app-celular.webp" alt="Helora no celular" loading="lazy"></div>
+<section id="funcoes" style="background:var(--soft)"><div class="wrap">
+  <div class="c"><h2 class="rv">Seu time cresce<br><b class="gt">sem contratar.</b></h2></div>
+  <div class="roles">
+    <div class="acc" id="acc"></div>
+    <div class="phone rv"><div class="scr">
+      <div class="ph-h"><span class="av">H</span><div><b id="roleName">Helora · Atendimento</b><small>● trabalhando</small></div><span class="wa">WhatsApp</span></div>
+      <div class="chatbox" id="roleChat"></div>
+      <div class="ph-in">Digite uma mensagem…<i>➤</i></div>
+    </div></div>
   </div>
-</section>
+</div></section>
 
-<!-- 10. SEGMENTOS -->
-<section id="segmentos" style="background:var(--soft)">
-  <div class="wrap center">
-    <span class="eyebrow rv">Para quem</span>
-    <h2 class="rv">Feito para empresas que vivem de vender.</h2>
-    <p class="sub rv">Se a venda acontece numa conversa, o Helora resolve.</p>
-  </div>
-  <div class="wrap">
-    <div class="segs">
-      <div class="seg rv"><div class="e">🛡️</div><h3>Seguros e consórcio</h3><p>Cotação, proposta, renovação e cobrança no mesmo funil.</p></div>
-      <div class="seg rv"><div class="e">🩺</div><h3>Clínicas e saúde</h3><p>Agendamento, confirmação e retorno de pacientes.</p></div>
-      <div class="seg rv"><div class="e">🏠</div><h3>Imobiliárias</h3><p>Leads dos portais e do Instagram atendidos na hora.</p></div>
-      <div class="seg rv"><div class="e">🎓</div><h3>Escolas e cursos</h3><p>Matrículas, dúvidas e campanhas para alunos.</p></div>
-      <div class="seg rv"><div class="e">🛍️</div><h3>Lojas e e-commerce</h3><p>Pedidos, catálogo e pós-venda pelo WhatsApp.</p></div>
-      <div class="seg rv"><div class="e">🚗</div><h3>Concessionárias</h3><p>Do primeiro contato ao test drive agendado.</p></div>
-      <div class="seg rv"><div class="e">💼</div><h3>Serviços e agências</h3><p>Orçamentos, propostas e follow-up organizados.</p></div>
-      <div class="seg rv"><div class="e">✨</div><h3>O seu segmento</h3><p>Funis e campos do jeito que sua operação precisa.</p></div>
-    </div>
-    <div class="seg-banner rv"><img class="par" src="assets/foto-negocio.webp" alt="" loading="lazy"><div><h3>Do pequeno negócio à equipe com dezenas de vendedores.</h3><p style="opacity:.85;margin:0">Comece com um número e cresça adicionando pessoas, setores e canais.</p></div></div>
-  </div>
-</section>
-
-<!-- 11. FAQ -->
-<section id="duvidas">
-  <div class="wrap center"><span class="eyebrow rv">Dúvidas</span><h2 class="rv">Perguntas frequentes</h2></div>
-  <div class="wrap faq">
-    <details class="rv"><summary>Preciso trocar meu número de WhatsApp?</summary><p>Não. Você conecta o número que já usa, pela API oficial da Meta ou por QR Code, e a equipe toda atende pelo mesmo número.</p></details>
-    <details class="rv"><summary>Quantas pessoas podem atender ao mesmo tempo?</summary><p>Várias. Cada atendente tem seu acesso, as conversas são divididas por setor e dá para transferir com um clique.</p></details>
-    <details class="rv"><summary>A IA substitui minha equipe?</summary><p>Não. Ela faz o primeiro atendimento e as tarefas repetitivas. Quando o cliente precisa de um especialista, ela passa a conversa com o resumo pronto.</p></details>
-    <details class="rv"><summary>Funciona no celular?</summary><p>Sim. Funciona no navegador do computador e do celular e pode ser instalado na tela inicial como um aplicativo.</p></details>
-    <details class="rv"><summary>Consigo trazer meus clientes de outro sistema?</summary><p>Sim. Importamos sua lista de clientes e negócios por planilha, e ajudamos na migração.</p></details>
-    <details class="rv"><summary>Quanto custa?</summary><p>Temos planos para cada tamanho de empresa, com e sem CRM e IA. Fale com a gente e montamos a proposta certa para você.</p></details>
-  </div>
-</section>
-
-<!-- 12. CTA FINAL -->
-<section class="final" id="contato">
-  <div class="final-bg" id="finalBg" aria-hidden="true"></div>
+<section class="cine">
+  <div class="bg" id="cineBg"></div>
   <div class="wrap">
     <div>
-      <span class="eyebrow w">Comercial e atendimento</span>
-      <h2>A próxima fase da sua empresa começa com uma conversa.</h2>
-      <p>Deixe seus dados e a gente mostra o Helora funcionando com a realidade do seu negócio.</p>
-    </div>
-    <form class="lead" id="lead" novalidate>
-      <div class="fields">
-        <div class="two"><label>Seu nome<input name="nome" required autocomplete="name"></label><label>Empresa<input name="empresa" required autocomplete="organization"></label></div>
-        <div class="two" style="margin-top:12px"><label>WhatsApp<input name="whatsapp" required inputmode="tel" autocomplete="tel" placeholder="(61) 99999-9999"></label><label>E-mail<input name="email" type="email" required autocomplete="email"></label></div>
-        <label style="margin-top:12px">Tamanho da equipe<select name="equipe"><option>Só eu</option><option>2 a 5 pessoas</option><option>6 a 15 pessoas</option><option>Mais de 15</option></select></label>
-        <input name="site" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
-        <p class="err" id="err"></p>
-        <button class="btn btn-p" type="submit" style="width:100%;margin-top:12px">Quero conhecer o Helora</button>
+      <h2 class="rv">O que a Helora<br><b>resolve para você</b></h2>
+      <div class="gl" id="gl">
+        <div class="gp on"><b>Atendimento</b><div class="x">Nenhuma mensagem sem resposta, de dia ou de madrugada.</div></div>
+        <div class="gp"><b>Qualificação</b><div class="x">Descobre quem está pronto para comprar e passa para o vendedor.</div></div>
+        <div class="gp"><b>Vendas</b><div class="x">Cada conversa vira um negócio no funil, com valor e responsável.</div></div>
+        <div class="gp"><b>Pós-venda</b><div class="x">Cobranças, renovações e follow-up sem esquecer ninguém.</div></div>
       </div>
-      <div class="ok" id="ok"><svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#34c759" stroke-width="2.4" style="margin:0 auto"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-6"/></svg><b>Recebemos seus dados!</b><span style="color:var(--mute)">Em breve a equipe Helora fala com você.</span></div>
+    </div>
+    <div class="laptop rv"><img id="lapImg" src="assets/app-conversas.webp" alt="Tela do Helora"></div>
+  </div>
+</section>
+
+<section id="recursos" class="c"><div class="wrap">
+  <h2 class="rv">Uma plataforma.<br><b class="gt">Tudo conectado.</b></h2>
+  <div class="ftabs rv" id="ftabs"><button class="on">✦ Helora IA</button><button>💬 Atendimento</button><button>▦ CRM</button><button>⏰ Atividades</button><button>📱 Celular</button></div>
+  <div class="fpanel on"><div><div class="ico">✦</div><h3>Helora IA</h3><p>Responde, entende áudio, qualifica e agenda. Passa para sua equipe com o resumo pronto.</p></div><div class="shot"><img src="assets/app-conversas.webp" alt="" loading="lazy"></div></div>
+  <div class="fpanel"><div><div class="ico">💬</div><h3>Atendimento</h3><p>WhatsApp, Instagram e Messenger numa caixa só, com setores e vários atendentes.</p></div><div class="shot"><img src="assets/app-conversas.webp" alt="" loading="lazy"></div></div>
+  <div class="fpanel"><div><div class="ico">▦</div><h3>CRM</h3><p>Funis do seu jeito, valores, responsáveis e automações.</p></div><div class="shot"><img src="assets/app-crm.webp" alt="" loading="lazy"></div></div>
+  <div class="fpanel"><div><div class="ico">⏰</div><h3>Atividades</h3><p>Ligações, propostas e cobranças com prazo. O atrasado fica em vermelho.</p></div><div class="shot"><img src="assets/app-atividades.webp" alt="" loading="lazy"></div></div>
+  <div class="fpanel"><div><div class="ico">📱</div><h3>No celular</h3><p>Atenda e venda de onde estiver.</p></div><div class="shot" style="max-width:300px;margin:0 auto;border-radius:34px"><img src="assets/app-celular.webp" alt="" loading="lazy"></div></div>
+</div></section>
+
+<section class="c" style="padding-top:40px"><div class="wrap">
+  <h2 class="rv">Time e IA<br><b class="gt">trabalhando juntos</b></h2>
+  <p class="lead rv">A IA fica com o repetitivo. Sua equipe, com o que fecha venda.</p>
+  <div class="big rv"><div class="shot" id="bigShot"><img src="assets/app-crm.webp" alt="Funil de vendas do Helora" loading="lazy"></div>
+    <div class="fc" style="left:30px;bottom:40px"><span class="ic" style="background:#34c759">✓</span><div>Venda fechada<small>Imobiliária Lar · R$ 18.900</small></div></div>
+  </div>
+</div></section>
+
+<section class="mob"><div class="wrap">
+  <div><h2 class="rv">Tudo isso na<br><b>palma da sua mão.</b></h2><p class="lead rv">Atenda, mova negócios e acompanhe a equipe pelo celular.</p></div>
+  <div class="phone rv" id="mobPhone"><img src="assets/app-celular.webp" alt="Helora no celular" loading="lazy"></div>
+</div></section>
+
+<section class="end" id="contato">
+  <div class="glow" style="width:600px;height:600px;background:#cfe6ff;left:50%;top:0;margin-left:-300px"></div>
+  <div class="wrap" style="position:relative">
+    <span class="pill rv"><span class="orb"></span>Comercial e atendimento</span>
+    <h2 class="rv" style="margin-top:20px">A próxima fase da sua empresa<br><b class="gt">começa com uma conversa.</b></h2>
+    <form class="lf rv" id="lead" novalidate>
+      <input name="nome" placeholder="Seu nome" required autocomplete="name">
+      <input name="empresa" placeholder="Empresa" required autocomplete="organization">
+      <input name="whatsapp" placeholder="WhatsApp" required inputmode="tel" autocomplete="tel">
+      <input name="email" type="email" placeholder="E-mail" required autocomplete="email">
+      <select name="equipe" class="full"><option>Tamanho da equipe: só eu</option><option>2 a 5 pessoas</option><option>6 a 15 pessoas</option><option>Mais de 15</option></select>
+      <input name="site" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+      <p class="err" id="err"></p>
+      <button class="btn btn-p full" type="submit">Falar com um consultor</button>
+      <div class="ok" id="ok"><b style="font-size:20px">Recebemos seus dados! 🎉</b><p style="color:var(--mute)">Em breve a equipe Helora fala com você.</p></div>
     </form>
   </div>
 </section>
 
-<footer>
-  <div class="wrap">
-    <img src="assets/helora-wordmark.png" alt="Helora">
-    <nav><a href="https://app1.heloracrm.com.br">Entrar no sistema</a><a href="#contato">Contato</a><a href="#duvidas">Dúvidas</a></nav>
-    <span>© <span id="y"></span> Helora · Fuse Marketing e Tecnologia</span>
-  </div>
-  <p class="credit">Fotos: Freepik. Telas do sistema com dados fictícios.</p>
-</footer>
+<footer><div class="wrap"><img src="assets/helora-wordmark.png" alt="Helora"><span><a href="https://app1.heloracrm.com.br">Entrar</a> · © <span id="y"></span> Helora · Fuse Marketing e Tecnologia · Fotos: Freepik</span></div></footer>
 
-<script src="assets/hero-art.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script>
-document.getElementById("y").textContent=new Date().getFullYear();
-const nav=document.getElementById("nav");
-const onScroll=()=>nav.classList.toggle("solid",scrollY>60);addEventListener("scroll",onScroll,{passive:true});onScroll();
-const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-// abas dos casos
-document.querySelectorAll(".tabs button").forEach(b=>b.onclick=()=>{document.querySelectorAll(".tabs button").forEach(x=>x.classList.toggle("on",x===b));document.querySelectorAll(".case").forEach((c,i)=>c.classList.toggle("on",i==b.dataset.t))});
-let tabAuto=setInterval(()=>{const on=document.querySelector(".tabs .on"),n=(+on.dataset.t+1)%4;document.querySelector(`.tabs [data-t="${n}"]`).click()},6000);
-document.querySelector(".tabs").addEventListener("click",()=>clearInterval(tabAuto),{once:true});
-
-if(window.gsap&&!reduce){gsap.registerPlugin(ScrollTrigger);
- // entrada do topo
- gsap.from(".hero-txt > *",{y:50,opacity:0,duration:1.1,stagger:.12,ease:"power3.out"});
- 
- gsap.to(".hero-txt",{yPercent:-25,opacity:.2,ease:"none",scrollTrigger:{trigger:".hero",start:"top top",end:"bottom top",scrub:true}});
- gsap.to("#heroArt",{yPercent:-10,ease:"none",scrollTrigger:{trigger:".hero",start:"top top",end:"bottom top",scrub:true}});
- // revelar ao rolar
- gsap.utils.toArray(".rv").forEach(el=>gsap.to(el,{opacity:1,y:0,duration:1,ease:"power3.out",scrollTrigger:{trigger:el,start:"top 88%"}}));
- // vídeo cresce ao rolar
- gsap.fromTo("#videoFrame",{scale:.82,rotateX:14,y:40},{scale:1,rotateX:0,y:0,ease:"none",scrollTrigger:{trigger:"#videoFrame",start:"top 95%",end:"top 25%",scrub:true}});
- // parallax nas fotos
- gsap.utils.toArray(".par").forEach(im=>gsap.fromTo(im,{yPercent:-8},{yPercent:8,ease:"none",scrollTrigger:{trigger:im.parentElement,start:"top bottom",end:"bottom top",scrub:true}}));
- gsap.fromTo("#finalBg",{yPercent:-8},{yPercent:8,ease:"none",scrollTrigger:{trigger:".final",start:"top bottom",end:"bottom top",scrub:true}});
- // celular gira levemente
- gsap.fromTo(".ph",{rotate:-12,y:80},{rotate:-3,y:0,ease:"none",scrollTrigger:{trigger:".mobile",start:"top bottom",end:"center center",scrub:true}});
- // galeria horizontal presa
- const mm=gsap.matchMedia();
- mm.add("(min-width: 900px)",()=>{const tr=document.getElementById("track");
-  gsap.to(tr,{x:()=>-(tr.scrollWidth-innerWidth+60),ease:"none",scrollTrigger:{trigger:"#plataforma",start:"top top",end:()=>"+="+(tr.scrollWidth-innerWidth),pin:true,scrub:1,invalidateOnRefresh:true}})});
- mm.add("(max-width: 899px)",()=>{document.getElementById("track").style.overflowX="auto"});
-}else{document.documentElement.classList.add("no-js");document.querySelectorAll(".rv").forEach(e=>{e.style.opacity=1;e.style.transform="none"})}
-
-// formulário
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],wait=t=>new Promise(r=>setTimeout(r,t));
+$("#y").textContent=new Date().getFullYear();
+addEventListener("scroll",()=>{$("#nav").classList.toggle("s",scrollY>30);$("#fcta").classList.toggle("on",scrollY>700&&scrollY<document.body.scrollHeight-innerHeight-600)},{passive:true});
+function typer(el,list){let i=0;(async()=>{for(;;){const t=list[i++%list.length];for(let k=1;k<=t.length;k++){el.textContent=t.slice(0,k);await wait(45)}await wait(1800);for(let k=t.length;k>=0;k--){el.textContent=t.slice(0,k);await wait(18)}await wait(300)}})()}
+typer($("#typed"),["Atender meus clientes no WhatsApp","Qualificar os leads do Instagram","Criar um funil de vendas","Agendar reuniões para minha equipe","Cobrar as parcelas do mês"]);
+typer($("#typed2"),["Crie um agente de pré-vendas","Monte meu funil de vendas","Lembre os clientes do vencimento","Mostre as conversas sem resposta"]);
+const chip=(i,t)=>`<span><i>${i}</i>${t}</span>`;
+const C1=[["✦","Atender no WhatsApp"],["◎","Criar um funil"],["📅","Agendar reuniões"],["🔔","Lembrar vencimentos"],["📣","Disparar campanha"],["🎙","Responder áudios"],["⇄","Transferir ao vendedor"]];
+$("#chips").innerHTML=[...C1,...C1].map(c=>chip(...c)).join("");
+const C2=C1.slice().reverse();$("#chips2").innerHTML=[...C2,...C2].map(c=>chip(...c)).join("");
+const SG=["Seguros","Clínicas","Imobiliárias","Escolas e cursos","Lojas","Consórcio","Concessionárias","Agências","Planos de saúde","Serviços"];
+$("#segs").innerHTML=[...SG,...SG].map(s=>`<span>${s}</span>`).join("");
+function chatLoop(box,getScript,onStep){(async()=>{for(;;){const sc=getScript();box.innerHTML="";const dots=document.createElement("div");dots.className="dots";dots.innerHTML="<i></i><i></i><i></i>";
+ for(let i=0;i<sc.length;i++){const[d,t]=sc[i];if(d==="out"){box.appendChild(dots);dots.classList.add("on");await wait(900);dots.remove()}
+  const m=document.createElement("div");m.className="msg "+d;m.textContent=t;box.appendChild(m);requestAnimationFrame(()=>requestAnimationFrame(()=>m.classList.add("on")));onStep&&onStep(i);await wait(1500)}
+ await wait(3500)}})()}
+const HERO=[["in","Oi! Vocês atendem hoje? Queria um orçamento 🙂"],["out","Atendemos sim! É para você ou para sua empresa?"],["in","Para minha empresa, somos 12 pessoas"],["out","Perfeito! Marquei com a Ana amanhã às 14h. Pode ser? 📅"],["in","Pode sim, obrigada!"]];
+const fcs=$$(".stage .fc"),order=[3,0,1,2];
+chatLoop($("#heroChat"),()=>{fcs.forEach(f=>f.classList.remove("on"));return HERO},i=>{if(order[i]!=null)fcs[order[i]].classList.add("on")});
+const ROLES=[
+ ["💬","Atendimento","Responde na hora, entende áudio e tira dúvidas com o que você ensinou.",[["in","Qual o horário de vocês?"],["out","Das 8h às 18h, mas eu respondo a qualquer hora 😉"],["in","Ótimo! Vocês entregam?"],["out","Entregamos sim. Qual o seu CEP?"]]],
+ ["◎","Pré-vendas","Qualifica cada lead e já marca a reunião na agenda do vendedor.",[["out","Você já vende hoje ou está começando?"],["in","Já vendo, uns 300 leads por mês"],["out","Perfeito. Amanhã às 14h com o vendedor, pode ser?"],["in","Fechado!"]]],
+ ["💲","Cobranças","Lembra o vencimento, manda o boleto e avisa a equipe quando pagar.",[["out","Oi, Carla! Sua parcela vence amanhã. Segue o boleto 📄"],["in","Já paguei, segue o comprovante"],["out","Recebido! Obrigada, Carla 💙"]]],
+ ["🔁","Pós-venda","Acompanha o cliente depois da venda e avisa a hora de renovar.",[["out","Oi, Pedro! Seu plano renova em 30 dias. Quer que eu prepare?"],["in","Quero sim, com o mesmo valor?"],["out","Já te mando as opções 😉"]]],
+ ["🎧","Suporte","Resolve as dúvidas comuns e chama um humano quando precisa.",[["in","Não consigo acessar minha conta"],["out","Te ajudo! Enviei o link para criar uma nova senha 🔐"],["in","Deu certo, valeu!"]]]
+];
+$("#acc").innerHTML=ROLES.map((r,i)=>`<div class="ac${i?"":" on"}"><h4><i>${r[0]}</i>${r[1]}</h4><div class="bd">${r[2]}</div><div class="bar"></div></div>`).join("");
+let role=0,roleT;const acs=$$(".ac");
+function setRole(i){role=i;acs.forEach((a,j)=>{a.classList.toggle("on",j===i);const b=a.querySelector(".bar");b.style.animation="none";b.offsetHeight;b.style.animation=""});$("#roleName").textContent="Helora · "+ROLES[i][1];clearTimeout(roleT);roleT=setTimeout(()=>setRole((role+1)%ROLES.length),7000)}
+acs.forEach((a,i)=>a.onclick=()=>setRole(i));chatLoop($("#roleChat"),()=>ROLES[role][3]);setRole(0);
+const LAP=["app-conversas","app-conversas","app-crm","app-atividades"],gps=$$(".gp");let gi=0;
+const setG=i=>{gi=i;gps.forEach((g,j)=>g.classList.toggle("on",j===i));const im=$("#lapImg");if(im.src.endsWith(LAP[i]+".webp"))return;im.style.opacity=0;setTimeout(()=>{im.src="assets/"+LAP[i]+".webp";im.style.opacity=1},250)};
+gps.forEach((g,i)=>g.onclick=()=>setG(i));setInterval(()=>setG((gi+1)%gps.length),5000);
+const tb=$$("#ftabs button"),fp=$$(".fpanel");let ti=0,tAuto;
+const setT=i=>{ti=i;tb.forEach((b,j)=>b.classList.toggle("on",j===i));fp.forEach((p,j)=>p.classList.toggle("on",j===i))};
+tb.forEach((b,i)=>b.onclick=()=>{clearInterval(tAuto);setT(i)});tAuto=setInterval(()=>setT((ti+1)%tb.length),5500);
+$("#vfull").onclick=()=>{const v=$("#vid");(v.requestFullscreen||v.webkitEnterFullscreen||(()=>{})).call(v)};
+const big=$(".big .fc");
+if(window.gsap&&!matchMedia("(prefers-reduced-motion: reduce)").matches){gsap.registerPlugin(ScrollTrigger);
+ gsap.utils.toArray(".rv").forEach(el=>gsap.to(el,{opacity:1,y:0,duration:1.1,ease:"power3.out",scrollTrigger:{trigger:el,start:"top 92%"}}));
+ gsap.from(".stage .phone",{y:160,opacity:0,scale:.9,duration:1.4,ease:"power3.out",delay:.3});
+ gsap.fromTo("#vf",{scale:.86,rotateX:16,transformPerspective:1400},{scale:1,rotateX:0,ease:"none",scrollTrigger:{trigger:"#vf",start:"top 100%",end:"top 30%",scrub:true}});
+ gsap.fromTo("#cineBg",{yPercent:-8},{yPercent:8,ease:"none",scrollTrigger:{trigger:".cine",start:"top bottom",end:"bottom top",scrub:true}});
+ gsap.fromTo("#bigShot",{x:160,y:60},{x:0,y:0,ease:"none",scrollTrigger:{trigger:".big",start:"top bottom",end:"center center",scrub:true}});
+ gsap.fromTo("#mobPhone",{rotate:-20,y:140},{rotate:-6,y:0,ease:"none",scrollTrigger:{trigger:".mob",start:"top bottom",end:"center center",scrub:true}});
+ ScrollTrigger.create({trigger:".big",start:"top 60%",onEnter:()=>big.classList.add("on")});
+}else{$$(".rv").forEach(e=>{e.style.opacity=1;e.style.transform="none"});big.classList.add("on")}
 const API="https://backend-production-b42a.up.railway.app/public/site-lead";
-document.getElementById("lead").addEventListener("submit",async e=>{e.preventDefault();const f=e.target,err=document.getElementById("err");err.style.display="none";
- const d=Object.fromEntries(new FormData(f));
+$("#lead").addEventListener("submit",async e=>{e.preventDefault();const f=e.target,err=$("#err");err.style.display="none";const d=Object.fromEntries(new FormData(f));
  if(!d.nome||!d.empresa||!d.whatsapp||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.email||"")){err.textContent="Preencha nome, empresa, WhatsApp e um e-mail válido.";err.style.display="block";return}
  const b=f.querySelector("button");b.disabled=true;b.textContent="Enviando...";
- try{const r=await fetch(API,{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify(d)});if(!r.ok)throw 0;
-  f.querySelector(".fields").style.display="none";document.getElementById("ok").style.display="block"}
- catch{err.textContent="Não conseguimos enviar agora. Tente de novo em instantes.";err.style.display="block";b.disabled=false;b.textContent="Quero conhecer o Helora"}});
+ try{const r=await fetch(API,{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify(d)});if(!r.ok)throw 0;[...f.children].forEach(c=>c.style.display="none");$("#ok").style.display="block"}
+ catch{err.textContent="Não conseguimos enviar agora. Tente de novo.";err.style.display="block";b.disabled=false;b.textContent="Falar com um consultor"}});
 </script>
 </body>
 </html>
