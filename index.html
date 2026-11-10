@@ -7,8 +7,32 @@
 <meta name="description" content="WhatsApp, Instagram e Messenger num só painel, CRM de vendas e uma IA que atende seus clientes 24h. Para empresas que vendem e atendem pelo WhatsApp.">
 <meta property="og:title" content="Helora · Atendimento, CRM e IA em um só lugar">
 <meta property="og:description" content="Você conversa. A Helora organiza, responde e vende junto com você.">
-<meta property="og:image" content="https://heloracrm.com.br/assets/app-conversas.webp">
+<meta property="og:image" content="https://heloracrm.com.br/assets/og.jpg">
 <link rel="icon" href="assets/favicon.png">
+<link rel="canonical" href="https://heloracrm.com.br/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#0071e3">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://heloracrm.com.br/">
+<meta property="og:site_name" content="Helora">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="apple-touch-icon" href="assets/helora-icon.png">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Organization", "name": "Helora", "url": "https://heloracrm.com.br/", "logo": "https://heloracrm.com.br/assets/helora-icon.png"}, {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Helora", "applicationCategory": "BusinessApplication", "operatingSystem": "Web, Android, iOS", "description": "Atendimento por WhatsApp, Instagram e Messenger, CRM de vendas e IA que atende 24h.", "url": "https://heloracrm.com.br/", "inLanguage": "pt-BR"}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Preciso trocar meu número de WhatsApp?", "acceptedAnswer": {"@type": "Answer", "text": "Não. Você conecta o número que já usa, pela API oficial da Meta ou por QR Code, e a equipe toda atende pelo mesmo número."}}, {"@type": "Question", "name": "Quantas pessoas podem atender ao mesmo tempo?", "acceptedAnswer": {"@type": "Answer", "text": "Várias. Cada atendente tem seu acesso, as conversas são divididas por setor e dá para transferir com um clique."}}, {"@type": "Question", "name": "A IA substitui minha equipe?", "acceptedAnswer": {"@type": "Answer", "text": "Não. Ela faz o primeiro atendimento e as tarefas repetitivas. Quando o cliente precisa de um especialista, ela passa a conversa com o resumo pronto."}}, {"@type": "Question", "name": "Funciona no celular?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. Funciona no navegador do computador e do celular e pode ser instalado na tela inicial como um aplicativo."}}, {"@type": "Question", "name": "Consigo trazer meus clientes de outro sistema?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. Importamos sua lista de clientes e negócios por planilha, e ajudamos na migração."}}, {"@type": "Question", "name": "Quanto custa?", "acceptedAnswer": {"@type": "Answer", "text": "Temos planos para cada tamanho de empresa, com e sem CRM e IA. Fale com a gente e montamos a proposta certa para você."}}]}]</script>
+<!-- MEDIÇÃO: cole os IDs abaixo e publique. Vazio = nada é carregado. -->
+<script>
+window.HELORA_GA4="";      // Google Analytics 4, ex.: G-XXXXXXXXXX
+window.HELORA_PIXEL="";    // Pixel da Meta, ex.: 123456789012345
+(function(){var g=window.HELORA_GA4,f=window.HELORA_PIXEL;
+window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};
+if(g){var s=document.createElement("script");s.async=1;s.src="https://www.googletagmanager.com/gtag/js?id="+g;document.head.appendChild(s);gtag("js",new Date());gtag("config",g)}
+if(f){!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version="2.0";n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init",f);fbq("track","PageView")}
+window.heloraTrack=function(ev,p){try{if(g)gtag("event",ev,p||{});if(f&&window.fbq){var m={generate_lead:"Lead",contact:"Contact",view_demo:"ViewContent"}[ev];m?fbq("track",m,p||{}):fbq("trackCustom",ev,p||{})}}catch(e){}};
+document.addEventListener("click",function(e){var a=e.target.closest("a");if(!a)return;var h=a.getAttribute("href")||"";if(h=="#contato")heloraTrack("contact",{local:a.textContent.trim().slice(0,40)});else if(h=="#video")heloraTrack("view_demo");else if(h.indexOf("app1.")>-1)heloraTrack("login_click")});
+})();
+</script>
+
 <link rel="stylesheet" href="assets/hero-art.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -236,8 +260,8 @@ footer a:hover{color:var(--ink)}
 <header class="nav" id="nav">
   <div class="wrap">
     <a href="#" class="logo" aria-label="Helora">
-      <span class="b" style="display:inline-flex;align-items:center;gap:8px;color:#fff;font-weight:700;font-size:22px;letter-spacing:-.02em"><img src="assets/helora-icon.png" alt="" style="height:30px;width:30px;border-radius:8px">Helora</span>
-      <img class="w" src="assets/helora-wordmark.png" alt="Helora">
+      <span class="b" style="display:inline-flex;align-items:center;gap:8px;color:#fff;font-weight:700;font-size:22px;letter-spacing:-.02em"><img width="219" height="220" src="assets/helora-icon.png" alt="" style="height:30px;width:30px;border-radius:8px">Helora</span>
+      <img width="880" height="220" class="w" src="assets/helora-wordmark.png" alt="Helora">
     </a>
     <ul>
       <li><a href="#video">Ver funcionando</a></li>
@@ -257,7 +281,7 @@ footer a:hover{color:var(--ink)}
   <div class="g g1"></div><div class="g g2"></div>
   <div class="wrap">
     <div class="hero-txt">
-      <span class="tag"><img src="assets/helora-icon.png" alt="">Você conversa. A Helora organiza e vende junto.</span>
+      <span class="tag"><img width="219" height="220" src="assets/helora-icon.png" alt="">Você conversa. A Helora organiza e vende junto.</span>
       <h1>Tudo que sua empresa precisa para <span class="hl">vender e atender</span>, em um só lugar.</h1>
       <p class="lead">WhatsApp, Instagram e Messenger num só painel, CRM de vendas, campanhas e uma IA que responde seus clientes a qualquer hora, do jeito da sua empresa.</p>
       <div class="ctas">
@@ -307,7 +331,7 @@ footer a:hover{color:var(--ink)}
         <li class="rv"><span class="n">3</span><div><b>Passa para o humano</b><small>Quando precisa de um especialista, transfere com o resumo da conversa.</small></div></li>
       </ul>
     </div>
-    <div class="photo rv"><img class="par" src="assets/foto-noite.webp" alt="Cliente conversando pelo celular à noite em casa" loading="lazy"><div class="chip"><i></i> Respondido às 23:41</div></div>
+    <div class="photo rv"><img width="1800" height="1344" class="par" src="assets/foto-noite.webp" alt="Cliente conversando pelo celular à noite em casa" loading="lazy"><div class="chip"><i></i> Respondido às 23:41</div></div>
   </div>
 </section>
 
@@ -346,10 +370,10 @@ footer a:hover{color:var(--ink)}
       <button data-t="2" role="tab">Follow-up</button>
       <button data-t="3" role="tab">No celular</button>
     </div>
-    <div class="case on"><div><h3>Nenhuma mensagem sem resposta.</h3><p>Todas as conversas do WhatsApp, Instagram e Messenger numa caixa só, divididas por setor, com etiquetas, transferência e histórico completo.</p><span class="kpi">💬 Vários atendentes no mesmo número</span></div><div class="shot"><img src="assets/app-conversas.webp" alt="Tela de conversas do Helora" loading="lazy"></div></div>
-    <div class="case"><div><h3>Seu funil andando, sem planilha.</h3><p>Cada conversa vira um negócio. Você vê em que etapa está cada cliente, quanto vale e quem é o responsável.</p><span class="kpi">📈 Funil, valores e responsáveis</span></div><div class="shot"><img src="assets/app-crm.webp" alt="Funil de vendas do CRM Helora" loading="lazy"></div></div>
-    <div class="case"><div><h3>Nenhum cliente esquecido.</h3><p>Ligações, propostas e cobranças com prazo e responsável. O que está atrasado aparece em vermelho e a equipe é avisada.</p><span class="kpi">⏰ Atrasadas, hoje e próximos dias</span></div><div class="shot"><img src="assets/app-atividades.webp" alt="Atividades do CRM Helora" loading="lazy"></div></div>
-    <div class="case"><div><h3>Atenda de onde estiver.</h3><p>O Helora funciona no celular e pode ser instalado na tela inicial como um aplicativo. Responda, mova negócios e acompanhe a equipe.</p><span class="kpi">📱 No computador e no celular</span></div><div class="shot" style="max-width:340px;margin:0 auto;border-radius:36px;border:8px solid #111"><img src="assets/app-celular.webp" alt="Helora no celular" loading="lazy"></div></div>
+    <div class="case on"><div><h3>Nenhuma mensagem sem resposta.</h3><p>Todas as conversas do WhatsApp, Instagram e Messenger numa caixa só, divididas por setor, com etiquetas, transferência e histórico completo.</p><span class="kpi">💬 Vários atendentes no mesmo número</span></div><div class="shot"><img width="1920" height="1146" src="assets/app-conversas.webp" alt="Tela de conversas do Helora" loading="lazy"></div></div>
+    <div class="case"><div><h3>Seu funil andando, sem planilha.</h3><p>Cada conversa vira um negócio. Você vê em que etapa está cada cliente, quanto vale e quem é o responsável.</p><span class="kpi">📈 Funil, valores e responsáveis</span></div><div class="shot"><img width="2346" height="1146" src="assets/app-crm.webp" alt="Funil de vendas do CRM Helora" loading="lazy"></div></div>
+    <div class="case"><div><h3>Nenhum cliente esquecido.</h3><p>Ligações, propostas e cobranças com prazo e responsável. O que está atrasado aparece em vermelho e a equipe é avisada.</p><span class="kpi">⏰ Atrasadas, hoje e próximos dias</span></div><div class="shot"><img width="1920" height="1146" src="assets/app-atividades.webp" alt="Atividades do CRM Helora" loading="lazy"></div></div>
+    <div class="case"><div><h3>Atenda de onde estiver.</h3><p>O Helora funciona no celular e pode ser instalado na tela inicial como um aplicativo. Responda, mova negócios e acompanhe a equipe.</p><span class="kpi">📱 No computador e no celular</span></div><div class="shot" style="max-width:340px;margin:0 auto;border-radius:36px;border:8px solid #111"><img width="780" height="1688" src="assets/app-celular.webp" alt="Helora no celular" loading="lazy"></div></div>
   </div>
 </section>
 
@@ -360,10 +384,10 @@ footer a:hover{color:var(--ink)}
     <h2 class="rv" style="max-width:760px">Atendimento, CRM, campanhas e relatórios. Tudo conversa entre si.</h2>
   </div>
   <div class="track" id="track">
-    <div class="slide"><div class="frame"><div class="bar"><i></i><i></i><i></i><span>Conversas</span></div><img src="assets/app-conversas.webp" alt="" loading="lazy"></div><h4>Atendimento multicanal</h4><p>IA e equipe na mesma conversa.</p></div>
-    <div class="slide"><div class="frame"><div class="bar"><i></i><i></i><i></i><span>CRM</span></div><img src="assets/app-crm.webp" alt="" loading="lazy"></div><h4>CRM de vendas</h4><p>Funis do jeito do seu negócio.</p></div>
-    <div class="slide"><div class="frame"><div class="bar"><i></i><i></i><i></i><span>Atividades</span></div><img src="assets/app-atividades.webp" alt="" loading="lazy"></div><h4>Atividades e lembretes</h4><p>Prazos claros para toda a equipe.</p></div>
-    <div class="slide phone"><div class="frame"><img src="assets/app-celular.webp" alt="" loading="lazy"></div><h4>No celular</h4><p>Leve a operação no bolso.</p></div>
+    <div class="slide"><div class="frame"><div class="bar"><i></i><i></i><i></i><span>Conversas</span></div><img width="1920" height="1146" src="assets/app-conversas.webp" alt="" loading="lazy"></div><h4>Atendimento multicanal</h4><p>IA e equipe na mesma conversa.</p></div>
+    <div class="slide"><div class="frame"><div class="bar"><i></i><i></i><i></i><span>CRM</span></div><img width="2346" height="1146" src="assets/app-crm.webp" alt="" loading="lazy"></div><h4>CRM de vendas</h4><p>Funis do jeito do seu negócio.</p></div>
+    <div class="slide"><div class="frame"><div class="bar"><i></i><i></i><i></i><span>Atividades</span></div><img width="1920" height="1146" src="assets/app-atividades.webp" alt="" loading="lazy"></div><h4>Atividades e lembretes</h4><p>Prazos claros para toda a equipe.</p></div>
+    <div class="slide phone"><div class="frame"><img width="780" height="1688" src="assets/app-celular.webp" alt="" loading="lazy"></div><h4>No celular</h4><p>Leve a operação no bolso.</p></div>
   </div>
 </section>
 
@@ -381,8 +405,8 @@ footer a:hover{color:var(--ink)}
       </ul>
     </div>
     <div class="mosaic">
-      <div class="photo big rv"><img class="par" src="assets/foto-equipe.webp" alt="Equipe de vendas comemorando no escritório" loading="lazy"><div class="chip"><i></i> Venda fechada · R$ 18.900</div></div>
-      <div class="photo sm rv"><img class="par" src="assets/foto-negocio.webp" alt="Dona de negócio atendendo cliente pelo celular" loading="lazy"></div>
+      <div class="photo big rv"><img width="1800" height="1344" class="par" src="assets/foto-equipe.webp" alt="Equipe de vendas comemorando no escritório" loading="lazy"><div class="chip"><i></i> Venda fechada · R$ 18.900</div></div>
+      <div class="photo sm rv"><img width="1344" height="1800" class="par" src="assets/foto-negocio.webp" alt="Dona de negócio atendendo cliente pelo celular" loading="lazy"></div>
     </div>
   </div>
   <div class="wrap">
@@ -402,7 +426,7 @@ footer a:hover{color:var(--ink)}
       <p class="sub rv">Atenda clientes, mova negócios no funil, veja as atividades do dia e acompanhe a equipe pelo celular, de onde estiver.</p>
       <span class="pill2 rv"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg> Instale na tela inicial do iPhone ou Android</span>
     </div>
-    <div class="ph rv"><img src="assets/app-celular.webp" alt="Helora no celular" loading="lazy"></div>
+    <div class="ph rv"><img width="780" height="1688" src="assets/app-celular.webp" alt="Helora no celular" loading="lazy"></div>
   </div>
 </section>
 
@@ -424,7 +448,7 @@ footer a:hover{color:var(--ink)}
       <div class="seg rv"><div class="e">💼</div><h3>Serviços e agências</h3><p>Orçamentos, propostas e follow-up organizados.</p></div>
       <div class="seg rv"><div class="e">✨</div><h3>O seu segmento</h3><p>Funis e campos do jeito que sua operação precisa.</p></div>
     </div>
-    <div class="seg-banner rv"><img src="assets/foto-negocio.webp" alt="" loading="lazy"><div><h3>Do pequeno negócio à equipe com dezenas de vendedores.</h3><p style="opacity:.85;margin:0">Comece com um número e cresça adicionando pessoas, setores e canais.</p></div></div>
+    <div class="seg-banner rv"><img width="1344" height="1800" src="assets/foto-negocio.webp" alt="" loading="lazy"><div><h3>Do pequeno negócio à equipe com dezenas de vendedores.</h3><p style="opacity:.85;margin:0">Comece com um número e cresça adicionando pessoas, setores e canais.</p></div></div>
   </div>
 </section>
 
@@ -466,7 +490,7 @@ footer a:hover{color:var(--ink)}
 
 <footer>
   <div class="wrap">
-    <img src="assets/helora-wordmark.png" alt="Helora">
+    <img width="880" height="220" src="assets/helora-wordmark.png" alt="Helora">
     <nav><a href="https://app1.heloracrm.com.br">Entrar no sistema</a><a href="#contato">Contato</a><a href="#duvidas">Dúvidas</a></nav>
     <span>© <span id="y"></span> Helora · Fuse Marketing e Tecnologia</span>
   </div>
@@ -515,7 +539,7 @@ document.getElementById("lead").addEventListener("submit",async e=>{e.preventDef
  const d=Object.fromEntries(new FormData(f));
  if(!d.nome||!d.empresa||!d.whatsapp||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.email||"")){err.textContent="Preencha nome, empresa, WhatsApp e um e-mail válido.";err.style.display="block";return}
  const b=f.querySelector("button");b.disabled=true;b.textContent="Enviando...";
- try{const r=await fetch(API,{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify(d)});if(!r.ok)throw 0;
+ try{const r=await fetch(API,{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify(d)});if(!r.ok)throw 0;window.heloraTrack&&heloraTrack("generate_lead",{equipe:d.equipe||""});
   f.querySelector(".fields").style.display="none";document.getElementById("ok").style.display="block"}
  catch{err.textContent="Não conseguimos enviar agora. Tente de novo em instantes.";err.style.display="block";b.disabled=false;b.textContent="Quero conhecer o Helora"}});
 (()=>{const W=t=>new Promise(r=>setTimeout(r,t));
