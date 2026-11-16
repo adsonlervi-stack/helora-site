@@ -200,7 +200,6 @@ footer .w{display:flex;justify-content:space-between;align-items:center;gap:16px
   <div><span class="k">Tudo conectado</span><h2>Um sistema no lugar de cinco</h2><p>Atendimento, CRM, campanhas, tarefas e IA conversando entre si. Sem planilha, sem perder cliente.</p></div>
 </div></div></section>
 
-<section class="full"><img id="fullImg" src="assets/foto-acordo.webp" alt="" width="1800" height="1005" loading="lazy"><h2 class="rv">Mais vendas<br><small>com menos</small> planilha</h2></section>
 
 <section class="sec" id="video"><div class="w">
   <div class="head"><span class="k rv">Na prática</span><h2 class="rv">Veja a Helora funcionando</h2></div>
@@ -291,7 +290,6 @@ $("#pl").innerHTML=PL.map(p=>`<li><span>${p[0]}</span>${p[1]}</li>`).join("");
 if(window.gsap&&!matchMedia("(prefers-reduced-motion: reduce)").matches){gsap.registerPlugin(ScrollTrigger);
  gsap.utils.toArray(".rv").forEach(el=>gsap.to(el,{opacity:1,y:0,duration:1,ease:"power3.out",scrollTrigger:{trigger:el,start:"top 92%"}}));
  gsap.fromTo("#heroImg",{yPercent:-8},{yPercent:4,ease:"none",scrollTrigger:{trigger:".hpic",start:"top bottom",end:"bottom top",scrub:true}});
- gsap.fromTo("#fullImg",{yPercent:-8},{yPercent:8,ease:"none",scrollTrigger:{trigger:".full",start:"top bottom",end:"bottom top",scrub:true}});
  gsap.fromTo(".full h2",{scale:.8},{scale:1,ease:"none",scrollTrigger:{trigger:".full",start:"top bottom",end:"center center",scrub:true}});
 }else $$(".rv").forEach(e=>{e.style.opacity=1;e.style.transform="none"});
 const API="https://backend-production-b42a.up.railway.app/public/site-lead";
