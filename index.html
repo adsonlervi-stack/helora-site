@@ -204,72 +204,31 @@ footer .w{display:flex;justify-content:space-between;align-items:center;gap:16px
 
 <section class="sec" id="video"><div class="w">
   <div class="head"><span class="k rv">Na prática</span><h2 class="rv">Veja a Helora funcionando</h2></div>
-  <div class="vid rv" id="hmwrap" style="position:relative;aspect-ratio:16/9;overflow:hidden;border-radius:24px"><style>
-#hm{position:absolute;left:0;top:0;width:1280px;height:720px;overflow:hidden;font-family:Inter,system-ui,sans-serif;background:#F5F8FD;transform-origin:0 0}#hm *{box-sizing:border-box}
-#hm .bg{position:absolute;inset:0;background:radial-gradient(600px 400px at 15% 20%,#d9ebff,transparent 70%),radial-gradient(700px 500px at 90% 90%,#d4f1ff,transparent 70%),#F5F8FD}
-#hm .blob{position:absolute;border-radius:50%;filter:blur(40px);opacity:.55}
-#hm .stage{position:absolute;inset:0;perspective:1600px}
-#hm .win{position:absolute;left:150px;top:118px;width:980px;height:613px;border-radius:18px;background:#fff;box-shadow:0 40px 90px #0b3b7a33,0 0 0 1px #0000000d;overflow:hidden;opacity:0;transform-origin:50% 50%}
-#hm .bar{height:34px;background:#f3f5f9;display:flex;align-items:center;gap:7px;padding:0 14px;border-bottom:1px solid #e8ebf0}#hm .bar i{width:11px;height:11px;border-radius:50%;background:#ff5f57}#hm .bar i:nth-child(2){background:#febc2e}#hm .bar i:nth-child(3){background:#28c840}
-#hm .bar span{margin-left:16px;background:#fff;border-radius:8px;font-size:12px;color:#6b7280;padding:4px 14px}
-#hm .shot{width:100%;height:calc(100% - 34px);background-size:cover;background-position:top left;transform-origin:0 0}
-#hm .cap{position:absolute;left:0;right:0;top:44px;text-align:center;opacity:0}
-#hm .cap b{font-size:34px;letter-spacing:-1px;color:#101820}#hm .cap small{display:block;font-size:17px;color:#5b6472;margin-top:6px}
-#hm .g{background:linear-gradient(90deg,#0071e3,#5ac8fa);-webkit-background-clip:text;color:transparent}
-.ic{display:none;position:absolute;left:50%;top:50%;width:150px;height:150px;margin:-120px 0 0 -75px;border-radius:24%;background:linear-gradient(135deg,#0071e3,#5ac8fa);display:grid;place-items:center;box-shadow:0 30px 60px #0071e355;opacity:0}
-#hm .t1{position:absolute;left:0;right:0;top:290px;text-align:center;font-size:44px;font-weight:700;letter-spacing:-1.5px;color:#101820;opacity:0}
-#hm .ring{position:absolute;border:3px solid #0071e3;border-radius:14px;opacity:0;box-shadow:0 0 0 6px #0071e322}
-#hm .chip{position:absolute;background:#fff;border-radius:14px;padding:10px 14px;font-size:14px;box-shadow:0 14px 34px #0b3b7a2a;display:flex;gap:8px;align-items:center;opacity:0;font-weight:600;color:#101820}
-#hm .chip em{font-style:normal;width:26px;height:26px;border-radius:8px;display:grid;place-items:center;color:#fff;font-size:12px}
-</style><div id="hm"><div class="bg"></div>
-<div class="blob" style="width:300px;height:300px;background:#8cc8ff;left:-60px;top:380px" id="b1"></div><div class="blob" style="width:260px;height:260px;background:#9be7ff;right:-40px;top:-40px" id="b2"></div>
-<div class="stage">
-
-<div class="t1" id="t1">Todo o seu atendimento.<br><span class="g">Em um só lugar.</span></div>
-<div class="t1" id="t2">Atenda melhor. <span class="g">Venda mais.</span><br><span style="font-size:24px;font-weight:600;color:#5b6472">heloracrm.com.br</span></div>
-<div class="win" id="w1"><div class="bar"><i></i><i></i><i></i><span>app1.heloracrm.com.br · Conversas</span></div><div class="shot" style="background-image:url(assets/shot-conversations.webp)"></div></div>
-<div class="win" id="w2"><div class="bar"><i></i><i></i><i></i><span>app1.heloracrm.com.br · CRM</span></div><div class="shot" style="background-image:url(assets/shot-crm.webp)"></div></div>
-<div class="win" id="w3"><div class="bar"><i></i><i></i><i></i><span>app1.heloracrm.com.br · Contatos</span></div><div class="shot" style="background-image:url(assets/shot-contacts.webp)"></div></div>
-<div class="win" id="w4"><div class="bar"><i></i><i></i><i></i><span>app1.heloracrm.com.br · Início</span></div><div class="shot" style="background-image:url(assets/shot-home.webp)"></div></div>
-<div class="chip" id="k1" style="left:70px;top:300px"><em style="background:#25D366">WA</em>Nova mensagem no WhatsApp</div>
-<div class="chip" id="k2" style="right:60px;top:430px"><em style="background:linear-gradient(45deg,#F58529,#DD2A7B)">IG</em>Direct do Instagram</div>
-<div class="chip" id="k3" style="left:90px;top:520px"><em style="background:#0071e3">✦</em>Helora IA respondeu em 3s</div>
-<div class="chip" id="k4" style="right:70px;top:250px"><em style="background:#30d158">✓</em>Negócio ganho · R$ 3.600</div>
-<div class="cap" id="c1"><b>Conversas de <span class="g">todos os canais</span></b><small>WhatsApp, Instagram e Messenger numa caixa só, com IA ajudando</small></div>
-<div class="cap" id="c2"><b>Um <span class="g">funil de vendas</span> que anda sozinho</b><small>Cada conversa vira um negócio no CRM</small></div>
-<div class="cap" id="c3"><b>Seus clientes <span class="g">organizados</span></b><small>Etiquetas, histórico e último contato de cada um</small></div>
-<div class="cap" id="c4"><b>O seu dia <span class="g">num olhar</span></b><small>Negócios, conversas e prioridades na tela inicial</small></div>
-</div>
-</div></div><script>(function(){var root=document.getElementById('hm');function run(){root.getAnimations({subtree:true}).forEach(function(a){a.cancel()});
-var E='cubic-bezier(.22,1,.36,1)';var $=function(id){return document.getElementById(id)};
-let seenA={};function A(id,kf,delay,dur,ease=E){const f=seenA[id]?'forwards':'both';seenA[id]=1;$(id).animate(kf,{delay,duration:dur,easing:ease,fill:f})}
-const IN={opacity:1};
-// intro
-A('t1',[{opacity:0,transform:'translateY(30px)'},{opacity:1,transform:'none'}],700,800);
-A('t1',[{opacity:1},{opacity:0,transform:'translateY(-40px)'}],2500,600);
-// scenes
-const S=[['w1','c1',3000,8400],['w2','c2',8400,12600],['w3','c3',12600,16200],['w4','c4',16200,20000]];
-S.forEach(([w,c,a,b],i)=>{
- const from=i==0?'translateY(260px) rotateX(28deg) scale(.86)':'translateX(1100px) rotateY(-24deg) scale(.9)';
- A(w,[{opacity:0,transform:from},{opacity:1,transform:'translateY(38px) scale(.9)'}],a,1100);
- A(c,[{opacity:0,transform:'translateY(16px)'},{opacity:1,transform:'none'}],a+300,700);
- if(i<3){A(w,[{opacity:1,transform:'translateY(38px) scale(.9)'},{opacity:0,transform:'translateX(-1150px) rotateY(24deg) scale(.9)'}],b-200,1000,'cubic-bezier(.64,0,.78,0)');
- A(c,[{opacity:1},{opacity:0,transform:'translateY(-14px)'}],b-300,400);}
-});
-// zooms
-const z=(w,sc,ox,oy,a,d)=>{const s=$(w).querySelector('.shot');s.animate([{transform:'scale(1) translate(0,0)'},{transform:`scale(${sc}) translate(${ox}px,${oy}px)`}],{delay:a,duration:d,easing:'cubic-bezier(.65,0,.35,1)',fill:'both'});s.animate([{transform:`scale(${sc}) translate(${ox}px,${oy}px)`},{transform:'scale(1) translate(0,0)'}],{delay:a+d+900,duration:900,easing:'cubic-bezier(.65,0,.35,1)',fill:'forwards'})};
-z('w1',1.55,-300,-60,4600,1300);z('w2',1.5,-40,-50,9800,1100);z('w3',1.4,0,0,13900,1000);z('w4',1.35,-10,-10,17300,1000);
-// chips
-[['k1',3900],['k2',4500],['k3',5800],['k4',10300]].forEach(([k,t])=>{A(k,[{opacity:0,transform:'translateY(20px) scale(.9)'},{opacity:1,transform:'none'}],t,600,'cubic-bezier(.34,1.56,.64,1)');A(k,[{opacity:1},{opacity:0,transform:'translateY(-14px)'}],t+2000,500)});
-// outro
-A('w4',[{opacity:1,transform:'translateY(38px) scale(.9)'},{opacity:0,transform:'translateY(60px) scale(.5)'}],19800,900,'cubic-bezier(.64,0,.78,0)');
-A('c4',[{opacity:1},{opacity:0}],19700,400);
-
-A('t2',[{opacity:0,transform:'translateY(30px)'},{opacity:1,transform:'none'}],20600,800);
-A('b1',[{transform:'translate(0,0)'},{transform:'translate(300px,-200px)'}],0,23000,'linear');A('b2',[{transform:'translate(0,0)'},{transform:'translate(-260px,260px)'}],0,23000,'linear');
-
-}
-var wrap=document.getElementById('hmwrap');function fit(){root.style.transform='scale('+(wrap.clientWidth/1280)+')'}fit();addEventListener('resize',fit);var on=false,tm;new IntersectionObserver(function(e){if(e[0].isIntersecting&&!on){on=true;(function loop(){seenA={};run();tm=setTimeout(loop,23000)})()}}).observe(wrap)})();</script>
+  <div class="hc-chips rv"><span>CONVERSAS</span><span>CRM</span><span>HELORA IA</span><span>CAMPANHAS</span><span>TAREFAS</span></div>
+<div id="hcw" class="rv" style="position:relative;width:100%;aspect-ratio:1060/540"><div id="hc">
+<style>
+.hc-chips{display:flex;flex-wrap:wrap;gap:10px 22px;justify-content:center;font:600 12px ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:1.5px;color:#0071e3;margin:-6px 0 30px}
+#hc{position:absolute;left:0;top:0;width:1060px;height:540px;transform-origin:0 0;font-family:Inter,system-ui,sans-serif;color:#101820}
+#hc .main{position:absolute;left:90px;top:0;width:880px;border-radius:20px;overflow:hidden;box-shadow:0 30px 70px #0b3b7a26;border:1px solid #e6e9ef;background:#fff}#hc .main img{width:100%;display:block}
+#hc .w{position:absolute;background:#fff;border-radius:18px;box-shadow:0 20px 50px #0b3b7a2e;padding:16px;text-align:left;opacity:0}
+#hc .ph{position:absolute;right:0;top:110px;width:220px;height:410px;border-radius:34px;background:#101820;padding:9px;opacity:0}
+#hc .ph .s{background:#fff;border-radius:26px;height:100%;padding:14px 10px;display:flex;flex-direction:column;gap:7px;font-size:12px}
+#hc .b{padding:7px 10px;border-radius:12px;max-width:85%;opacity:0}#hc .c{background:#f1f3f6;align-self:flex-start}#hc .o{background:#dcf6e3;align-self:flex-end}#hc .ia{background:#e4eeff;align-self:flex-end}
+#hcw.go .w,#hcw.go .ph{animation:hcIn .9s cubic-bezier(.34,1.56,.64,1) forwards,hcF 5s ease-in-out 1.2s infinite}
+#hcw.go .b{animation:hcB .5s ease forwards}
+@keyframes hcIn{from{opacity:0;transform:translateY(30px) scale(.92)}to{opacity:1;transform:none}}
+@keyframes hcF{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes hcB{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@keyframes hcBar{from{width:0}to{width:78%}}#hcw.go .bar{animation:hcBar 1.6s ease .6s both}
+</style>
+<div class="main"><img src="assets/shot-crm.webp" alt="CRM da Helora" loading="lazy"></div>
+<div class="w" style="left:0;top:70px;width:210px;animation-delay:.2s,1.2s"><div style="font-size:12px;color:#6b7280">Meta do mês</div><div style="font-size:30px;font-weight:700">78% <small style="font-size:12px;color:#1a8f45">▲ 12%</small></div><div style="height:8px;background:#eef1f6;border-radius:6px;margin-top:8px"><div class="bar" style="width:78%;height:100%;border-radius:6px;background:linear-gradient(90deg,#0071e3,#5ac8fa)"></div></div><div style="font-size:11px;color:#6b7280;margin-top:6px">R$ 97 mil de R$ 125 mil</div></div>
+<div class="w" style="left:30px;top:280px;width:240px;animation-delay:.6s,2s"><div style="font-size:12px;color:#0071e3;font-weight:600">✦ Helora IA</div><div style="font-size:13.5px;margin-top:6px">Respondi 14 clientes enquanto você dormia. 3 viraram negócio.</div></div>
+<div class="ph" style="animation-delay:.4s,1.6s"><div class="s"><b style="font-size:12.5px">Mariana Souza</b>
+<div class="b c" style="animation-delay:1.2s">Oi! Queria cotar um seguro 🚗</div><div class="b ia" style="animation-delay:2s">Me passa o modelo e o ano?</div><div class="b c" style="animation-delay:2.8s">Onix 2022</div><div class="b o" style="animation-delay:3.6s">Já te mando 3 opções 😊</div>
+<div class="b" style="margin-top:auto;max-width:100%;background:#fff;box-shadow:0 8px 20px #0002;font-weight:600;display:flex;gap:6px;align-items:center;animation-delay:4.6s"><span style="background:#30d158;color:#fff;border-radius:6px;padding:2px 6px">✓</span>Negócio ganho 🎉</div></div></div>
+</div></div>
+<script>(function(){var w=document.getElementById('hcw'),c=document.getElementById('hc');function f(){c.style.transform='scale('+(w.clientWidth/1060)+')'}f();addEventListener('resize',f);new IntersectionObserver(function(e,o){if(e[0].isIntersecting){w.classList.add('go');o.disconnect()}},{threshold:.3}).observe(w)})();</script>
 </div></section>
 
 <section class="sec" style="padding-top:20px"><div class="w">
