@@ -37,6 +37,14 @@
     }, { passive: true });
   });
 
+  // o mascote fala
+  $$(".say").forEach(function (el) {
+    var L = ["Oi! Eu sou a Helora 👋", "Me pergunta qualquer coisa ↘", "Atendo seus clientes 24h 😊"], i = 0;
+    function type(t, cb) { el.classList.remove("done"); el.classList.add("on"); el.textContent = ""; var k = 0; (function f() { el.textContent = t.slice(0, ++k); if (k < t.length) setTimeout(f, 45); else { el.classList.add("done"); setTimeout(cb, 2600) } })() }
+    function loop() { type(L[i++ % L.length], function () { el.classList.remove("on"); setTimeout(loop, 1800) }) }
+    setTimeout(loop, 1400);
+  });
+
   // revelar
   var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target) } }) }, { threshold: .12 });
   $$(".rv").forEach(function (e) { io.observe(e) });

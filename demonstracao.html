@@ -12,7 +12,7 @@
 <meta property="og:title" content="Demonstração · Helora"><meta property="og:description" content="Converse com a Helora IA e veja como ela atende seus clientes.">
 <meta property="og:image" content="https://heloracrm.com.br/assets/og.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="assets/favicon.png?v=3"><link rel="apple-touch-icon" href="assets/helora-icon.png">
+<link rel="icon" href="assets/favicon.png?v=4"><link rel="apple-touch-icon" href="assets/helora-icon.png">
 
 <!-- MEDIÇÃO: cole os IDs abaixo e publique. Vazio = nada é carregado. -->
 <script>
@@ -28,12 +28,12 @@ document.addEventListener("click",function(e){var a=e.target.closest("a");if(!a)
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css?v=1">
-<script src="assets/favicon-blink.js" defer></script>
+<link rel="stylesheet" href="assets/site.css?v=3">
+<script src="assets/favicon-blink.js?v=2" defer></script>
 </head>
 <body>
 <nav class="nav dark"><div class="w">
-<a class="logo" href="index.html"><svg viewBox="0 0 200 200"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0071e3"/><stop offset="1" stop-color="#5ac8fa"/></linearGradient></defs><rect width="200" height="200" rx="48" fill="url(#lg)"/><circle cx="100" cy="100" r="66" fill="#fff"/><rect x="76" y="78" width="14" height="32" rx="7" fill="#0f1b2d"/><rect x="110" y="78" width="14" height="32" rx="7" fill="#0f1b2d"/></svg>Helora</a>
+<a class="logo" href="index.html"><svg viewBox="0 0 200 200"><defs><radialGradient id="lg" cx=".35" cy=".28" r=".85"><stop offset="0" stop-color="#fff"/><stop offset=".75" stop-color="#eef3fb"/><stop offset="1" stop-color="#c9d6ea"/></radialGradient></defs><circle cx="100" cy="100" r="92" fill="url(#lg)" stroke="#c3d1e6" stroke-width="6"/><rect x="68" y="64" width="20" height="46" rx="10" fill="#0f1b2d"/><rect x="112" y="64" width="20" height="46" rx="10" fill="#0f1b2d"/></svg>Helora</a>
 <button class="burger" aria-label="Menu">☰</button>
 <ul><li><a href="recursos.html">Recursos</a></li><li><a href="demonstracao.html">Demonstração</a></li><li><a href="segmentos.html">Para quem</a></li><li><a href="planos.html">Planos</a></li><li><a href="comparar.html">Comparar</a></li><li><a href="contato.html">Contato</a></li></ul>
 <a class="btn bw nb" href="https://app1.heloracrm.com.br">Entrar</a>
@@ -47,7 +47,7 @@ document.addEventListener("click",function(e){var a=e.target.closest("a");if(!a)
 <button class="q" data-q="2">Quero falar com uma pessoa</button>
 <button class="q" data-q="3">Vocês fazem plano de saúde para empresa?</button>
 <button class="q" data-q="4">Meu boleto venceu, e agora?</button></div>
-<div class="phone"><div class="top"><svg viewBox="0 0 200 200"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0071e3"/><stop offset="1" stop-color="#5ac8fa"/></linearGradient></defs><rect width="200" height="200" rx="48" fill="url(#lg)"/><circle cx="100" cy="100" r="66" fill="#fff"/><rect x="76" y="78" width="14" height="32" rx="7" fill="#0f1b2d"/><rect x="110" y="78" width="14" height="32" rx="7" fill="#0f1b2d"/></svg><div><b>Prime Corretora</b><div style="font-size:12.5px;color:#5d6676">Atendimento com Helora IA</div></div></div>
+<div class="phone"><div class="top"><svg viewBox="0 0 200 200"><defs><radialGradient id="lg" cx=".35" cy=".28" r=".85"><stop offset="0" stop-color="#fff"/><stop offset=".75" stop-color="#eef3fb"/><stop offset="1" stop-color="#c9d6ea"/></radialGradient></defs><circle cx="100" cy="100" r="92" fill="url(#lg)" stroke="#c3d1e6" stroke-width="6"/><rect x="68" y="64" width="20" height="46" rx="10" fill="#0f1b2d"/><rect x="112" y="64" width="20" height="46" rx="10" fill="#0f1b2d"/></svg><div><b>Prime Corretora</b><div style="font-size:12.5px;color:#5d6676">Atendimento com Helora IA</div></div></div>
 <div class="msgs" id="msgs"><div class="bub s">Hoje</div><div class="bub h"><small>✦ Helora IA</small>Olá! Sou a assistente da Prime Corretora. Como posso te ajudar?</div></div>
 <form id="ask"><input id="in" placeholder="Escreva como se fosse um cliente…" autocomplete="off"><button class="btn bb" type="submit">Enviar</button></form></div>
 </div></div></section>
@@ -64,12 +64,13 @@ document.querySelectorAll(".q").forEach(function(b){b.onclick=function(){documen
 document.getElementById("ask").onsubmit=function(e){e.preventDefault();var v=document.getElementById("in").value.trim();if(!v)return;document.getElementById("in").value="";run(v,["Boa pergunta! Nesta demonstração eu respondo só alguns exemplos.","No seu Helora, eu respondo com as informações da sua empresa e passo para a equipe quando precisar."],"")};
 })();
 </script>
-<section class="final rv"><h2>Imagine isso com os seus clientes.</h2><p>A gente configura a Helora IA com as informações da sua empresa.</p><div class="ctas" style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap"><a class="btn bw" href="contato.html">Falar com a gente ↗</a><a class="btn ghost" href="demonstracao.html">Testar a demonstração</a></div><div class="mwrap"><div class="mascot"><div class="ball"></div><div class="eyes"><i class="eye"></i><i class="eye"></i></div></div><svg class="ribbons" viewBox="0 0 600 600"><path d="M40 360C160 120 420 80 560 260" stroke="#34c759"/><path d="M30 260C200 420 420 460 580 300" stroke="#ff7eb6" style="animation-delay:.3s"/><path d="M80 470C220 260 380 160 540 120" stroke="#ffb340" style="animation-delay:.6s"/><path d="M60 200C240 330 380 360 560 420" stroke="#b78cff" style="animation-delay:.9s"/><path d="M120 120C260 300 300 420 470 520" stroke="#5ac8fa" style="animation-delay:1.2s"/></svg></div></section>
+<section class="final rv"><h2>Imagine isso com os seus clientes.</h2><p>A gente configura a Helora IA com as informações da sua empresa.</p><div class="ctas" style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap"><a class="btn bw" href="contato.html">Falar com a gente ↗</a><a class="btn ghost" href="demonstracao.html">Testar a demonstração</a></div><div class="mwrap"><div class="mascot"><div class="say"></div><div class="ball"></div><div class="eyes"><i class="eye"></i><i class="eye"></i></div></div></div></section>
 <footer><div class="w">
 <div><div class="logo">Helora</div><p style="max-width:280px;line-height:1.6">Atendimento, CRM e IA num lugar só, para empresas que vendem pelo WhatsApp.</p></div>
 <div><b>Produto</b><a href="recursos.html">Recursos</a><a href="demonstracao.html">Demonstração</a><a href="planos.html">Planos</a><a href="comparar.html">Comparar</a></div>
 <div><b>Empresa</b><a href="segmentos.html">Para quem é</a><a href="contato.html">Contato</a><a href="index.html#duvidas">Dúvidas</a></div>
 <div><b>Acesso</b><a href="https://app1.heloracrm.com.br">Entrar no sistema</a><a href="contato.html">Falar com a gente</a></div>
 </div><div class="w" style="display:block;margin-top:40px">© <span id="y"></span> Helora · Fuse Marketing e Tecnologia</div></footer>
-<script src="assets/site.js?v=1" defer></script>
+<script src="assets/site.js?v=2" defer></script>
+<script src="assets/helora-chat.js?v=2" defer></script>
 </body></html>
