@@ -11,32 +11,6 @@
     $$(".nav ul a").forEach(function (a) { if (a.getAttribute("href") === here) a.classList.add("on") });
   }
 
-  // mascote
-  $$(".mascot").forEach(function (m) {
-    var eyes = $(".eyes", m);
-    addEventListener("mousemove", function (e) {
-      var r = m.getBoundingClientRect(), cx = r.left + r.width / 2, cy = r.top + r.height * .4;
-      var dx = e.clientX - cx, dy = e.clientY - cy, d = Math.max(1, Math.hypot(dx, dy)), k = Math.min(1, d / 500);
-      eyes.style.transform = "translate(calc(-50% + " + (dx / d * 34 * k) + "%), " + (dy / d * 30 * k) + "%)";
-    });
-    addEventListener("touchstart", function (e) { var t = e.touches[0]; dispatchEvent(new MouseEvent("mousemove", { clientX: t.clientX, clientY: t.clientY })) }, { passive: true });
-    (function blink() {
-      setTimeout(function () {
-        m.classList.add("blink"); setTimeout(function () { m.classList.remove("blink") }, 140);
-        if (Math.random() < .3) setTimeout(function () { m.classList.add("blink"); setTimeout(function () { m.classList.remove("blink") }, 120) }, 280);
-        blink();
-      }, 2200 + Math.random() * 3200);
-    })();
-    var rb = $(".ribbons", m.parentNode);
-    if (rb) (function rib() { setTimeout(function () { rb.classList.add("on"); setTimeout(function () { rb.classList.remove("on"); rib() }, 3400) }, 4000 + Math.random() * 3000) })();
-    // sobe com a rolagem
-    var wrap = m.parentNode;
-    addEventListener("scroll", function () {
-      var r = wrap.getBoundingClientRect(), p = Math.max(0, Math.min(1, 1 - r.top / innerHeight));
-      m.style.transform = "translateX(-50%) translateY(" + (-p * 14) + "%)";
-    }, { passive: true });
-  });
-
   // o mascote fala
   $$(".say").forEach(function (el) {
     var L = ["Oi! Eu sou a Helora 👋", "Me pergunta qualquer coisa ↘", "Atendo seus clientes 24h 😊"], i = 0;

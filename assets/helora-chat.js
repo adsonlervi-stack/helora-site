@@ -3,9 +3,9 @@
   var page = (location.pathname.split("/").pop() || "index.html").replace(".html", "") || "index";
   var css = document.createElement("style");
   css.textContent = `
-.hc-btn{position:fixed;left:calc(100vw - 90px);top:calc(100vh - 90px);z-index:90;width:68px;height:68px;border-radius:50%;border:0;cursor:pointer;background:radial-gradient(circle at 34% 26%,#fff,#eef3fb 60%,#c9d6ea);box-shadow:0 14px 34px #0b3b7a40,0 0 0 1px #0000000d;transition:transform .25s}
+.hc-btn{position:fixed;right:22px;bottom:22px;z-index:90;width:68px;height:68px;border-radius:50%;border:0;cursor:pointer;background:radial-gradient(circle at 34% 26%,#fff,#eef3fb 60%,#c9d6ea);box-shadow:0 14px 34px #0b3b7a40,0 0 0 1px #0000000d;transition:transform .25s}
 .hc-btn:hover{transform:scale(1.06)}
-.hc-btn .e{position:absolute;top:22px;width:9px;height:20px;border-radius:9px;background:#101820;transition:transform .2s}
+.hc-btn .e{position:absolute;top:22px;width:9px;height:20px;border-radius:9px;background:#101820;z-index:1}
 .hc-btn .e.a{left:22px}.hc-btn .e.b{left:37px}
 .hc-btn.bl .e{transform:scaleY(.1)}
 .hc-tip{position:fixed;left:0;top:0;z-index:90;max-width:270px;background:#fff;border-radius:18px 18px 4px 18px;padding:13px 16px;font:500 14.5px/1.45 "Plus Jakarta Sans",system-ui,sans-serif;color:#0f1b2d;box-shadow:0 16px 40px #0b3b7a2e,0 0 0 1px #0000000a;opacity:0;transform:translateY(10px);transition:.35s;pointer-events:none}
@@ -46,45 +46,11 @@
     var r = btn.getBoundingClientRect(), dx = e.clientX - (r.left + 34), dy = e.clientY - (r.top + 34), d = Math.max(1, Math.hypot(dx, dy)), k = Math.min(1, d / 400);
     eyes.forEach(function (el) { el.style.translate = (dx / d * 6 * k) + "px " + (dy / d * 5 * k) + "px" });
   });
-  // expressões: muito mais que piscar
-  var X = ["x-squint", "x-wide", "x-happy", "x-sleepy", "x-tl", "x-tr", "x-cross", "x-wink"];
-  function expr(root, blinkCls) {
-    var acts = [
-      function (d) { root.classList.add(blinkCls); setTimeout(function () { root.classList.remove(blinkCls) }, 140); d(300) },
-      function (d) { root.classList.add(blinkCls); setTimeout(function () { root.classList.remove(blinkCls); setTimeout(function () { root.classList.add(blinkCls); setTimeout(function () { root.classList.remove(blinkCls) }, 120) }, 160) }, 120); d(600) },
-      function (d) { var c = X[Math.floor(Math.random() * X.length)]; root.classList.add(c); setTimeout(function () { root.classList.remove(c); d(200) }, 900 + Math.random() * 900) },
-      function (d) { root.dataset.look = "l"; setTimeout(function () { root.dataset.look = "r"; setTimeout(function () { root.dataset.look = ""; d(200) }, 800) }, 800) },
-      function (d) { root.dataset.look = "u"; setTimeout(function () { root.classList.add("x-squint"); setTimeout(function () { root.classList.remove("x-squint"); root.dataset.look = ""; d(200) }, 700) }, 600) }
-    ];
-    (function go() { setTimeout(function () { acts[Math.floor(Math.random() * acts.length)](function (w) { setTimeout(go, w) }) }, 1800 + Math.random() * 2600) })();
-  }
-  window.heloraExpr = expr;
-  expr(btn, "bl");
-  document.querySelectorAll(".mascot").forEach(function (m) { expr(m, "blink") });
-  var lk = document.createElement("style"); lk.textContent = '[data-look=l] .e,[data-look=l] .eye{translate:-45% 0}[data-look=r] .e,[data-look=r] .eye{translate:45% 0}[data-look=u] .e,[data-look=u] .eye{translate:0 -35%}'; document.head.appendChild(lk);
-
-  // anda pelo site: pula de seção em seção
-  var hero = document.querySelector(".hero .mascot"), lastT = null, W = 68;
-  function perch() {
-    var vh = innerHeight, vw = innerWidth, heroVis = hero && hero.getBoundingClientRect().top < vh * .85 && hero.getBoundingClientRect().bottom > 80;
-    btn.classList.toggle("gone", !!heroVis && !box.classList.contains("on"));
-    var best = null, bd = 1e9;
-    document.querySelectorAll(".feat,.stat,.frame,.card,.plan,.faq,.phone,.cmp,.lf,.final h2").forEach(function (el) {
-      var r = el.getBoundingClientRect(); if (r.bottom < 120 || r.top > vh - 120) return;
-      var d = Math.abs((r.top + r.bottom) / 2 - vh * .5); if (d < bd) { bd = d; best = el }
-    });
-    var L = vw - W - 22, T = vh - W - 22;
-    if (best && !box.classList.contains("on")) { var r = best.getBoundingClientRect(); L = Math.min(vw - W - 12, Math.max(12, r.right - W - 30)); T = Math.min(vh - W - 12, Math.max(84, r.top - W + 14)) }
-    if (best !== lastT) { lastT = best; btn.classList.remove("hop"); void btn.offsetWidth; btn.classList.add("hop") }
-    btn.style.left = L + "px"; btn.style.top = T + "px";
-    placeTip();
-  }
-  function placeTip() {
-    var L = parseFloat(btn.style.left) || innerWidth - 90, T = parseFloat(btn.style.top) || innerHeight - 90, tw = Math.min(270, tip.offsetWidth || 260);
-    var left = L - tw - 14 > 10 ? L - tw - 14 : L + W + 14; tip.style.left = Math.min(innerWidth - tw - 10, left) + "px"; tip.style.top = Math.max(80, T - 4) + "px";
-  }
-  var raf = 0; addEventListener("scroll", function () { cancelAnimationFrame(raf); raf = requestAnimationFrame(perch) }, { passive: true }); addEventListener("resize", perch);
-  setTimeout(perch, 50);
+  function placeTip() { var r = btn.getBoundingClientRect(); tip.style.left = Math.max(10, r.left - (tip.offsetWidth || 260) - 14) + "px"; tip.style.top = (r.top + 6) + "px" }
+  function perch() {}
+  btn.setAttribute("data-orb", "mini"); btn.innerHTML = '<span class="orb-body" style="position:absolute;inset:0;border-radius:50%;background:inherit"></span><i class="e a" data-eye="l"></i><i class="e b" data-eye="r"></i>';
+  setTimeout(function () { window.HeloraOrb && HeloraOrb(btn, { eyeTravel: .08, bob: 1.5 }) }, 0);
+  addEventListener("resize", placeTip);
 
   // dicas por página
   var TIPS = {
@@ -99,7 +65,7 @@
   var shown = false, closedTip = false;
   try { closedTip = sessionStorage.getItem("hc_tip") === "x" } catch (e) {}
   function showTip(t) {
-    if (closedTip || box.classList.contains("on") || btn.classList.contains("gone")) { setTimeout(function () { showTip(t) }, 3000); return }
+    if (closedTip || box.classList.contains("on") ) { setTimeout(function () { showTip(t) }, 3000); return }
     tip.innerHTML = t + '<button class="x" aria-label="Fechar">✕</button>'; placeTip(); tip.classList.add("on");
     tip.querySelector(".x").onclick = function (e) { e.stopPropagation(); tip.classList.remove("on"); closedTip = true; try { sessionStorage.setItem("hc_tip", "x") } catch (e) {} };
   }
