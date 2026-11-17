@@ -245,3 +245,6 @@ footer .logo{font-weight:800;font-size:22px;color:var(--ink);letter-spacing:-.5p
 .v-orb i{position:absolute;top:22px;width:11px;height:25px;border-radius:9px;background:#fff}.v-orb i:first-child{left:24px}.v-orb i:last-child{left:43px}
 .blue .v-orb{background:#fff}.blue .v-orb i{background:#0f1b2d}
 .v-nt{color:#0f1b2d}.fx a.blue .v-ph div{background:#f5f7fb}
+.final .ctas{position:relative;z-index:3}
+.final .mwrap{height:240px;margin-top:56px}
+.final .mascot{width:min(70vw,380px);bottom:-70%}
