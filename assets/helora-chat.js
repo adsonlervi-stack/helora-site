@@ -3,9 +3,9 @@
   var page = (location.pathname.split("/").pop() || "index.html").replace(".html", "") || "index";
   var css = document.createElement("style");
   css.textContent = `
-.hc-btn{position:fixed;right:22px;bottom:22px;z-index:90;width:68px;height:68px;border-radius:50%;border:0;cursor:pointer;background:radial-gradient(circle at 34% 26%,#fff,#eef3fb 60%,#c9d6ea);box-shadow:0 14px 34px #0b3b7a40,0 0 0 1px #0000000d;transition:transform .25s}
+.hc-btn{position:fixed;right:22px;bottom:22px;z-index:90;width:68px;height:68px;border-radius:50%;border:0;cursor:pointer;background:radial-gradient(circle at 32% 25%,#4a9bff,#1b7cff 45%,#0050c8 80%,#0a2a8a);box-shadow:0 14px 34px #0050c855;transition:transform .25s}
 .hc-btn:hover{transform:scale(1.06)}
-.hc-btn .e{position:absolute;top:22px;width:9px;height:20px;border-radius:9px;background:#101820;z-index:1}
+.hc-btn .e{position:absolute;top:22px;width:9px;height:20px;border-radius:9px;background:#fff;z-index:1}
 .hc-btn .e.a{left:22px}.hc-btn .e.b{left:37px}
 .hc-btn.bl .e{transform:scaleY(.1)}
 .hc-tip{position:fixed;left:0;top:0;z-index:90;max-width:270px;background:#fff;border-radius:18px 18px 4px 18px;padding:13px 16px;font:500 14.5px/1.45 "Plus Jakarta Sans",system-ui,sans-serif;color:#0f1b2d;box-shadow:0 16px 40px #0b3b7a2e,0 0 0 1px #0000000a;opacity:0;transform:translateY(10px);transition:.35s;pointer-events:none}
